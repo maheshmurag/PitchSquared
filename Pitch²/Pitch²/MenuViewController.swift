@@ -29,7 +29,7 @@ class MenuViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            //self.pitchTitle.frame = CGRect(x: 267, y: self.pitchTitle.frame.origin.y , width: 457, height: self.pitchTitle.frame.size.height)
+            self.pitchTitle.frame = CGRect(x: 267, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
              self.squaredLabel.alpha = 1.0
             }, completion: {
                 (value: Bool) in
