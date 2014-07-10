@@ -1,14 +1,21 @@
 //
 //  MenuViewController.swift
-//  Pitch²
+//  Pitch
 //
 //  Created by Cluster 5 on 7/9/14.
 //  Copyright (c) 2014 Alex Yeh. All rights reserved.
 //
 
 import UIKit
+import Foundation
 
 class MenuViewController: UIViewController {
+    
+    @IBOutlet var pitchLabel: UILabel
+    @IBOutlet var squaredLabel: UILabel
+    @IBOutlet var startCover: UIView
+    @IBOutlet var highScoreCover: UIView
+    @IBOutlet var helpCover: UIView
     
     init(coder aDecoder: NSCoder!)
     {
@@ -20,12 +27,35 @@ class MenuViewController: UIViewController {
         // Custom initialization
     }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var pitchData:PitchData = PitchData.sharedInstance;
-        pitchData.score = 10;
-        println("\(pitchData.score)")
+//        var pitchData:PitchData = PitchData.sharedInstance;
+//        pitchData.score = 10;
+//        println("\(pitchData.score)")
+        
+        //Cool Animations
+        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.pitchLabel.frame = CGRect(x: 267, y: self.pitchLabel.frame.origin.y, width: self.pitchLabel.frame.size.width, height: self.pitchLabel.frame.size.height);
+        }, completion: {
+            (value: Bool) in
+            UIView.animateWithDuration(0.5, animations: {
+                self.squaredLabel.alpha = 1.0
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.4, animations: {
+                    self.startCover.frame = CGRect(x: 1024, y: self.startCover.frame.origin.y , width: 457, height: self.startCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.highScoreCover.frame = CGRect(x: 1024, y: self.highScoreCover.frame.origin.y , width: 457, height: self.highScoreCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+        
+                UIView.animateWithDuration(0.4, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.helpCover.frame = CGRect(x: 1024, y: self.helpCover.frame.origin.y, width: 457, height: self.helpCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+            })
+        });
         
     }
 
