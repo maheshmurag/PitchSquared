@@ -15,6 +15,7 @@
 		971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 971D2185196D3AA500EA559B /* PitchIcon76.png */; };
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
+		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		971D2185196D3AA500EA559B /* PitchIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PitchIcon76.png; sourceTree = "<group>"; };
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
 				971D218A196D3CA000EA559B /* MenuViewController.swift */,
+				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
 				97170464196CA22200EADBFB /* Images.xcassets */,
 				9717045B196CA22200EADBFB /* Supporting Files */,
 			);
@@ -167,6 +170,7 @@
 				TargetAttributes = {
 					97170457196CA22200EADBFB = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = R9FZ4DBS7P;
 					};
 					97170469196CA22200EADBFB = {
 						CreatedOnToolsVersion = 6.0;
@@ -219,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */,
 				971D2189196D3B8900EA559B /* PitchData.swift in Sources */,
 				9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */,
 				971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */,
@@ -339,10 +344,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,10 +358,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

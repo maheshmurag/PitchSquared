@@ -44,14 +44,14 @@ class MenuViewController: UIViewController {
                 self.squaredLabel.alpha = 1.0
             }, completion: {
                 (value: Bool) in
-                UIView.animateWithDuration(0.4, animations: {
+                UIView.animateWithDuration(0.5, animations: {
                     self.startCover.frame = CGRect(x: 1024, y: self.startCover.frame.origin.y , width: 457, height: self.startCover.frame.size.height)
                 }, completion: {(value: Bool) in})
-                UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.highScoreCover.frame = CGRect(x: 1024, y: self.highScoreCover.frame.origin.y , width: 457, height: self.highScoreCover.frame.size.height)
                 }, completion: {(value: Bool) in})
         
-                UIView.animateWithDuration(0.4, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.helpCover.frame = CGRect(x: 1024, y: self.helpCover.frame.origin.y, width: 457, height: self.helpCover.frame.size.height)
                 }, completion: {(value: Bool) in})
             })
