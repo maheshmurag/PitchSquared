@@ -11,7 +11,7 @@ import Foundation
 
 class MenuViewController: UIViewController {
     
-    @IBOutlet var pitchLabel: UILabel
+    @IBOutlet var pitchTitle: UILabel
     @IBOutlet var squaredLabel: UILabel
     @IBOutlet var startCover: UIView
     @IBOutlet var highScoreCover: UIView
@@ -27,6 +27,23 @@ class MenuViewController: UIViewController {
         // Custom initialization
     }
 
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            //self.pitchTitle.frame = CGRect(x: 267, y: self.pitchTitle.frame.origin.y , width: 457, height: self.pitchTitle.frame.size.height)
+             self.squaredLabel.alpha = 1.0
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.5, animations: {
+                    self.startCover.frame = CGRect(x: 1024, y: self.startCover.frame.origin.y , width: 457, height: self.startCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.highScoreCover.frame = CGRect(x: 1024, y: self.highScoreCover.frame.origin.y , width: 457, height: self.highScoreCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.helpCover.frame = CGRect(x: 1024, y: self.helpCover.frame.origin.y, width: 457, height: self.helpCover.frame.size.height)
+                }, completion: {(value: Bool) in})
+            });
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,26 +53,7 @@ class MenuViewController: UIViewController {
 //        println("\(pitchData.score)")
         
         //Cool Animations
-        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.pitchLabel.frame = CGRect(x: 267, y: self.pitchLabel.frame.origin.y, width: self.pitchLabel.frame.size.width, height: self.pitchLabel.frame.size.height);
-        }, completion: {
-            (value: Bool) in
-            UIView.animateWithDuration(0.5, animations: {
-                self.squaredLabel.alpha = 1.0
-            }, completion: {
-                (value: Bool) in
-                UIView.animateWithDuration(0.5, animations: {
-                    self.startCover.frame = CGRect(x: 1024, y: self.startCover.frame.origin.y , width: 457, height: self.startCover.frame.size.height)
-                }, completion: {(value: Bool) in})
-                UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.highScoreCover.frame = CGRect(x: 1024, y: self.highScoreCover.frame.origin.y , width: 457, height: self.highScoreCover.frame.size.height)
-                }, completion: {(value: Bool) in})
-        
-                UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.helpCover.frame = CGRect(x: 1024, y: self.helpCover.frame.origin.y, width: 457, height: self.helpCover.frame.size.height)
-                }, completion: {(value: Bool) in})
-            })
-        });
+            
         
     }
 
