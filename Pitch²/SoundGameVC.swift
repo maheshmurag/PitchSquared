@@ -19,9 +19,7 @@ class SoundGameVC: UIViewController {
     @IBOutlet var alabelX : UILabel
     @IBOutlet var alabelY : UILabel
     @IBOutlet var alabelZ : UILabel
-    @IBOutlet var glabelX : UILabel
-    @IBOutlet var glabelY : UILabel
-    @IBOutlet var glabelZ : UILabel
+
     @IBOutlet var debugL: UILabel
     @IBOutlet var calibrateButton: UIButton
     
@@ -32,6 +30,11 @@ class SoundGameVC: UIViewController {
     var initX: CDouble;
     var initY: CDouble;
     var initZ: CDouble;
+    
+    var xDiff : CDouble = 0;
+    var yDiff : CDouble = 0;
+    var zDiff : CDouble = 0;
+
     
     var initPitch: Float;
     
@@ -78,8 +81,29 @@ class SoundGameVC: UIViewController {
         
         startAccelerationCollection();
         
+        self.calibrateButton.layer.cornerRadius = 5.0;
+        self.calibrateButton.frame.size =  CGSizeMake(150, 30);
+        self.calibrateButton.layer.borderWidth = 2.0;
+        self.calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
+        
     }
     
+    func calibrate() -> Void{
+        
+        xDiff = xVal;
+        yDiff = yVal;
+        zDiff = zVal;
+        
+        
+        xVal -= xDiff
+        yVal -= yDiff
+        zVal -= zDiff
+        
+    }
+    
+    @IBAction func calibrateAction(sender: UIButton) {
+        calibrate()
+    }
     
     
     func startAccelerationCollection() -> Void{
