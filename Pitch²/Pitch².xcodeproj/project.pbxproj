@@ -23,20 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F423A39196F3E96006202C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F423A34196F3E95006202C0 /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "libpd-ios";
-		};
-		3F423A3B196F3E96006202C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F423A34196F3E95006202C0 /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 119013AB1486450C00086F19;
-			remoteInfo = "libpd-osx";
-		};
 		9717046B196CA22200EADBFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97170450196CA22200EADBFB /* Project object */;
@@ -44,10 +30,23 @@
 			remoteGlobalIDString = 97170457196CA22200EADBFB;
 			remoteInfo = "Pitch²";
 		};
+		9743ED2819704938009FC5B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+		9743ED2A19704938009FC5B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F423A34196F3E95006202C0 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97170458196CA22200EADBFB /* Pitch².app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch².app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9717045D196CA22200EADBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		971D2185196D3AA500EA559B /* PitchIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PitchIcon76.png; sourceTree = "<group>"; };
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9743ED2319704938009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -88,15 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F423A35196F3E95006202C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3F423A3A196F3E96006202C0 /* libpd-ios.a */,
-				3F423A3C196F3E96006202C0 /* libpd-osx.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9717044F196CA22200EADBFB = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +96,7 @@
 				9717045A196CA22200EADBFB /* Pitch² */,
 				9717046D196CA22200EADBFB /* Pitch²Tests */,
 				97170459196CA22200EADBFB /* Products */,
-				3F423A34196F3E95006202C0 /* libpd.xcodeproj */,
+				9743ED2319704938009FC5B9 /* libpd.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +151,15 @@
 				9717046F196CA22200EADBFB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9743ED2419704938009FC5B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9743ED2919704938009FC5B9 /* libpd-ios.a */,
+				9743ED2B19704938009FC5B9 /* libpd-osx.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +232,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3F423A35196F3E95006202C0 /* Products */;
-					ProjectRef = 3F423A34196F3E95006202C0 /* libpd.xcodeproj */;
+					ProductGroup = 9743ED2419704938009FC5B9 /* Products */;
+					ProjectRef = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -245,18 +245,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3F423A3A196F3E96006202C0 /* libpd-ios.a */ = {
+		9743ED2919704938009FC5B9 /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = 3F423A39196F3E96006202C0 /* PBXContainerItemProxy */;
+			remoteRef = 9743ED2819704938009FC5B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3F423A3C196F3E96006202C0 /* libpd-osx.a */ = {
+		9743ED2B19704938009FC5B9 /* libpd-osx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-osx.a";
-			remoteRef = 3F423A3B196F3E96006202C0 /* PBXContainerItemProxy */;
+			remoteRef = 9743ED2A19704938009FC5B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
