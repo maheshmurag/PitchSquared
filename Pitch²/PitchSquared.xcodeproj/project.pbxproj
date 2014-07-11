@@ -15,6 +15,7 @@
 		971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 971D2185196D3AA500EA559B /* PitchIcon76.png */; };
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
+		9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743ED6319705E07009FC5B9 /* libpd-ios.a */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -30,36 +31,43 @@
 			remoteGlobalIDString = 97170457196CA22200EADBFB;
 			remoteInfo = "Pitch²";
 		};
-		9743ED2819704938009FC5B9 /* PBXContainerItemProxy */ = {
+		9743ED6219705E07009FC5B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
+			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "libpd-ios";
 		};
-		9743ED2A19704938009FC5B9 /* PBXContainerItemProxy */ = {
+		9743ED6419705E07009FC5B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
+			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 119013AB1486450C00086F19;
 			remoteInfo = "libpd-osx";
 		};
+		9743ED6619705E0D009FC5B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		97170458196CA22200EADBFB /* Pitch².app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch².app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97170458196CA22200EADBFB /* PitchSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9717045D196CA22200EADBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97170462196CA22200EADBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97170464196CA22200EADBFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9717046A196CA22200EADBFB /* Pitch²Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch²Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9717046A196CA22200EADBFB /* PitchSquaredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchSquaredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717046F196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97170470196CA22200EADBFB /* Pitch_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_Tests.swift; sourceTree = "<group>"; };
 		971D2184196D3AA500EA559B /* PitchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PitchIcon.png; sourceTree = "<group>"; };
 		971D2185196D3AA500EA559B /* PitchIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PitchIcon76.png; sourceTree = "<group>"; };
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		9743ED2319704938009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
+		9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */,
 				97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */,
 				97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */,
 			);
@@ -96,15 +105,15 @@
 				9717045A196CA22200EADBFB /* Pitch² */,
 				9717046D196CA22200EADBFB /* Pitch²Tests */,
 				97170459196CA22200EADBFB /* Products */,
-				9743ED2319704938009FC5B9 /* libpd.xcodeproj */,
+				9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
 		97170459196CA22200EADBFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97170458196CA22200EADBFB /* Pitch².app */,
-				9717046A196CA22200EADBFB /* Pitch²Tests.xctest */,
+				97170458196CA22200EADBFB /* PitchSquared.app */,
+				9717046A196CA22200EADBFB /* PitchSquaredTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,11 +162,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9743ED2419704938009FC5B9 /* Products */ = {
+		9743ED5E19705E07009FC5B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9743ED2919704938009FC5B9 /* libpd-ios.a */,
-				9743ED2B19704938009FC5B9 /* libpd-osx.a */,
+				9743ED6319705E07009FC5B9 /* libpd-ios.a */,
+				9743ED6519705E07009FC5B9 /* libpd-osx.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97170457196CA22200EADBFB /* Pitch² */ = {
+		97170457196CA22200EADBFB /* PitchSquared */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97170474196CA22200EADBFB /* Build configuration list for PBXNativeTarget "Pitch²" */;
+			buildConfigurationList = 97170474196CA22200EADBFB /* Build configuration list for PBXNativeTarget "PitchSquared" */;
 			buildPhases = (
 				97170454196CA22200EADBFB /* Sources */,
 				97170455196CA22200EADBFB /* Frameworks */,
@@ -176,15 +185,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				9743ED6719705E0D009FC5B9 /* PBXTargetDependency */,
 			);
-			name = "Pitch²";
+			name = PitchSquared;
 			productName = "Pitch²";
-			productReference = 97170458196CA22200EADBFB /* Pitch².app */;
+			productReference = 97170458196CA22200EADBFB /* PitchSquared.app */;
 			productType = "com.apple.product-type.application";
 		};
-		97170469196CA22200EADBFB /* Pitch²Tests */ = {
+		97170469196CA22200EADBFB /* PitchSquaredTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97170477196CA22200EADBFB /* Build configuration list for PBXNativeTarget "Pitch²Tests" */;
+			buildConfigurationList = 97170477196CA22200EADBFB /* Build configuration list for PBXNativeTarget "PitchSquaredTests" */;
 			buildPhases = (
 				97170466196CA22200EADBFB /* Sources */,
 				97170467196CA22200EADBFB /* Frameworks */,
@@ -195,9 +205,9 @@
 			dependencies = (
 				9717046C196CA22200EADBFB /* PBXTargetDependency */,
 			);
-			name = "Pitch²Tests";
+			name = PitchSquaredTests;
 			productName = "Pitch²Tests";
-			productReference = 9717046A196CA22200EADBFB /* Pitch²Tests.xctest */;
+			productReference = 9717046A196CA22200EADBFB /* PitchSquaredTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97170453196CA22200EADBFB /* Build configuration list for PBXProject "Pitch²" */;
+			buildConfigurationList = 97170453196CA22200EADBFB /* Build configuration list for PBXProject "PitchSquared" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,31 +242,31 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9743ED2419704938009FC5B9 /* Products */;
-					ProjectRef = 9743ED2319704938009FC5B9 /* libpd.xcodeproj */;
+					ProductGroup = 9743ED5E19705E07009FC5B9 /* Products */;
+					ProjectRef = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				97170457196CA22200EADBFB /* Pitch² */,
-				97170469196CA22200EADBFB /* Pitch²Tests */,
+				97170457196CA22200EADBFB /* PitchSquared */,
+				97170469196CA22200EADBFB /* PitchSquaredTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9743ED2919704938009FC5B9 /* libpd-ios.a */ = {
+		9743ED6319705E07009FC5B9 /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = 9743ED2819704938009FC5B9 /* PBXContainerItemProxy */;
+			remoteRef = 9743ED6219705E07009FC5B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9743ED2B19704938009FC5B9 /* libpd-osx.a */ = {
+		9743ED6519705E07009FC5B9 /* libpd-osx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-osx.a";
-			remoteRef = 9743ED2A19704938009FC5B9 /* PBXContainerItemProxy */;
+			remoteRef = 9743ED6419705E07009FC5B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -309,8 +319,13 @@
 /* Begin PBXTargetDependency section */
 		9717046C196CA22200EADBFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 97170457196CA22200EADBFB /* Pitch² */;
+			target = 97170457196CA22200EADBFB /* PitchSquared */;
 			targetProxy = 9717046B196CA22200EADBFB /* PBXContainerItemProxy */;
+		};
+		9743ED6719705E0D009FC5B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libpd-ios";
+			targetProxy = 9743ED6619705E0D009FC5B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -415,7 +430,7 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PitchSquared;
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,7 +448,7 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PitchSquared;
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
@@ -455,7 +470,7 @@
 				INFOPLIST_FILE = "Pitch²Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PitchSquaredTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -471,7 +486,7 @@
 				INFOPLIST_FILE = "Pitch²Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PitchSquaredTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -479,7 +494,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97170453196CA22200EADBFB /* Build configuration list for PBXProject "Pitch²" */ = {
+		97170453196CA22200EADBFB /* Build configuration list for PBXProject "PitchSquared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97170472196CA22200EADBFB /* Debug */,
@@ -488,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97170474196CA22200EADBFB /* Build configuration list for PBXNativeTarget "Pitch²" */ = {
+		97170474196CA22200EADBFB /* Build configuration list for PBXNativeTarget "PitchSquared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97170475196CA22200EADBFB /* Debug */,
@@ -497,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97170477196CA22200EADBFB /* Build configuration list for PBXNativeTarget "Pitch²Tests" */ = {
+		97170477196CA22200EADBFB /* Build configuration list for PBXNativeTarget "PitchSquaredTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97170478196CA22200EADBFB /* Debug */,

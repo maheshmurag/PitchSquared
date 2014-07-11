@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "97170457196CA22200EADBFB"
-               BuildableName = "Pitch&#xb2;.app"
-               BlueprintName = "Pitch&#xb2;"
-               ReferencedContainer = "container:Pitch&#xb2;.xcodeproj">
+               BuildableName = "PitchSquared.app"
+               BlueprintName = "PitchSquared"
+               ReferencedContainer = "container:PitchSquared.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "97170469196CA22200EADBFB"
-               BuildableName = "Pitch&#xb2;Tests.xctest"
-               BlueprintName = "Pitch&#xb2;Tests"
-               ReferencedContainer = "container:Pitch&#xb2;.xcodeproj">
+               BuildableName = "PitchSquaredTests.xctest"
+               BlueprintName = "PitchSquaredTests"
+               ReferencedContainer = "container:PitchSquared.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "97170457196CA22200EADBFB"
-            BuildableName = "Pitch&#xb2;.app"
-            BlueprintName = "Pitch&#xb2;"
-            ReferencedContainer = "container:Pitch&#xb2;.xcodeproj">
+            BuildableName = "PitchSquared.app"
+            BlueprintName = "PitchSquared"
+            ReferencedContainer = "container:PitchSquared.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "97170457196CA22200EADBFB"
-            BuildableName = "Pitch&#xb2;.app"
-            BlueprintName = "Pitch&#xb2;"
-            ReferencedContainer = "container:Pitch&#xb2;.xcodeproj">
+            BuildableName = "PitchSquared.app"
+            BlueprintName = "PitchSquared"
+            ReferencedContainer = "container:PitchSquared.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "97170457196CA22200EADBFB"
-            BuildableName = "Pitch&#xb2;.app"
-            BlueprintName = "Pitch&#xb2;"
-            ReferencedContainer = "container:Pitch&#xb2;.xcodeproj">
+            BuildableName = "PitchSquared.app"
+            BlueprintName = "PitchSquared"
+            ReferencedContainer = "container:PitchSquared.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

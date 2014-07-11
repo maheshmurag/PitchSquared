@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Pitch&#xb2;.xcodeproj">
+      location = "self:PitchSquared.xcodeproj">
    </FileRef>
 </Workspace>

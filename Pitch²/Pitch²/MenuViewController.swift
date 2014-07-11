@@ -28,12 +28,12 @@ class MenuViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.pitchTitle.frame = CGRect(x: 267, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
-             self.squaredLabel.alpha = 1.0
             }, completion: {
                 (value: Bool) in
                 UIView.animateWithDuration(0.5, animations: {
+                    self.squaredLabel.alpha = 1.0
                     self.startCover.frame = CGRect(x: 1024, y: self.startCover.frame.origin.y , width: 457, height: self.startCover.frame.size.height)
                 }, completion: {(value: Bool) in})
                 UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
@@ -55,6 +55,9 @@ class MenuViewController: UIViewController {
         //Cool Animations
             
         
+    }
+    @IBAction func reset(sender: UIButton) {
+        self.pitchTitle.frame = CGRect(x: 278, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
     }
 
     override func didReceiveMemoryWarning() {
