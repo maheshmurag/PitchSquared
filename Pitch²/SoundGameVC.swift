@@ -72,7 +72,9 @@ class SoundGameVC: UIViewController {
         openAndRunTestPatch();
         audioController.print();
         
-        initPitch = Float(arc4random() % 901 + 100);
+        initPitch = Float(drand48());
+        initPitch * 1000 + 100;
+        println(initPitch);
         PdBase.sendFloat(initPitch, toReceiver: "number");
         
         backButton.layer.cornerRadius = 5.0;
@@ -107,8 +109,7 @@ class SoundGameVC: UIViewController {
     
     
     func startAccelerationCollection() -> Void{
-        //        debugL.text = "startAccelerationCollection()"
-        motionManager.accelerometerUpdateInterval = 0.2
+         motionManager.accelerometerUpdateInterval = 0.05
         
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
@@ -116,14 +117,19 @@ class SoundGameVC: UIViewController {
             self.yVal = accelerometerData.acceleration.y;
             self.zVal = accelerometerData.acceleration.z;
             
-            var strX = NSString(format: "aX %.2f", self.xVal-self.xDiff);
-            var strY = NSString(format: "aY %.2f", self.yVal-self.yDiff);
-            var strZ = NSString(format: "aZ %.2f", self.zVal-self.zDiff);
+            var strX = NSString(format: "%.2f", self.xVal-self.xDiff);
+            var strY = NSString(format: "%.2f", self.yVal-self.yDiff);
+            var strZ = NSString(format: "%.2f", self.zVal-self.zDiff);
             
             self.alabelX.text =  strX
             self.alabelY.text =  strY
             self.alabelZ.text =  strZ
             
+            
+            self.audioController.active=true
+            
+            PdBase.sendFloat(((strX).floatValue * 1000) + 100, toReceiver: "number")
+            println(strX.floatValue)
             })
         
         /*
@@ -142,7 +148,7 @@ class SoundGameVC: UIViewController {
     }
     
     func openAndRunTestPatch() -> Void {
-        let fileName = "test4.pd";
+        let fileName = "violin.pd";
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;

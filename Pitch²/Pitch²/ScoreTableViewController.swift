@@ -56,7 +56,7 @@ class ScoreTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
-         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ScoreCell", forIndexPath: indexPath) as UITableViewCell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ScoreCell", forIndexPath: indexPath) as UITableViewCell
         var indexLabel:UILabel = cell.viewWithTag(1) as UILabel;
         var indexNum:Int = indexPath.row + 1;
         indexLabel.text = String("\(indexNum).");
