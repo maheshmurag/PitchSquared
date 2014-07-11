@@ -208,11 +208,11 @@
                                         <constraint firstAttribute="width" constant="290" id="QE5-zl-jLd"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
-                                    <color key="textColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.25019137079999998" green="0.82262652849999995" blue="0.5821930421" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="bej-9a-PSY" firstAttribute="top" secondItem="f6H-yC-C4W" secondAttribute="top" constant="35" id="1oV-Zg-oJW"/>
                                 <constraint firstItem="bej-9a-PSY" firstAttribute="centerX" secondItem="f6H-yC-C4W" secondAttribute="centerX" id="GSg-kZ-HDp"/>
