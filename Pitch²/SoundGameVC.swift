@@ -112,9 +112,18 @@ class SoundGameVC: UIViewController {
         
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
-            self.alabelX.text = String("aX = \(accelerometerData.acceleration.x)");
-            self.alabelY.text = String("aY = \(accelerometerData.acceleration.y)");
-            self.alabelZ.text = String("aZ = \(accelerometerData.acceleration.z)");
+            self.xVal = accelerometerData.acceleration.x;
+            self.yVal = accelerometerData.acceleration.y;
+            self.zVal = accelerometerData.acceleration.z;
+            
+            var strX = NSString(format: "aX %.2f", self.xVal-self.xDiff);
+            var strY = NSString(format: "aY %.2f", self.yVal-self.yDiff);
+            var strZ = NSString(format: "aZ %.2f", self.zVal-self.zDiff);
+            
+            self.alabelX.text =  strX
+            self.alabelY.text =  strY
+            self.alabelZ.text =  strZ
+            
             })
         
         /*
