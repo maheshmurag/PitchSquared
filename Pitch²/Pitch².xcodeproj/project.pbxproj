@@ -19,8 +19,8 @@
 		97BED186196EFB6D00766F5E /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED181196EFB5000766F5E /* libpd-ios.a */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
-		97DA5FF6196F426900C1B660 /* test4.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97DA5FF5196F426900C1B660 /* test4.pd */; };
 		97DA5FF8196F43CF00C1B660 /* SoundGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */; };
+		97F5CF3D196F845B00D663EA /* test4.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97F5CF3C196F845B00D663EA /* test4.pd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,9 @@
 		97BED17B196EFB5000766F5E /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		97DA5FF5196F426900C1B660 /* test4.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test4.pd; sourceTree = "<group>"; };
 		97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundGameVC.swift; path = ../SoundGameVC.swift; sourceTree = "<group>"; };
+		97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pitch²-Bridging-Header.h"; sourceTree = "<group>"; };
+		97F5CF3C196F845B00D663EA /* test4.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test4.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +100,6 @@
 		9717044F196CA22200EADBFB = {
 			isa = PBXGroup;
 			children = (
-				97DA5FF5196F426900C1B660 /* test4.pd */,
 				97BED189196EFB7600766F5E /* AVFoundation.framework */,
 				97BED187196EFB7000766F5E /* AudioToolbox.framework */,
 				9717045A196CA22200EADBFB /* Pitch² */,
@@ -121,12 +121,14 @@
 		9717045A196CA22200EADBFB /* Pitch² */ = {
 			isa = PBXGroup;
 			children = (
+				97F5CF3C196F845B00D663EA /* test4.pd */,
 				9717045D196CA22200EADBFB /* AppDelegate.swift */,
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
 				971D218A196D3CA000EA559B /* MenuViewController.swift */,
 				97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */,
 				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
+				97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */,
 				97170464196CA22200EADBFB /* Images.xcassets */,
 				9717045B196CA22200EADBFB /* Supporting Files */,
 			);
@@ -275,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
-				97DA5FF6196F426900C1B660 /* test4.pd in Resources */,
+				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
@@ -423,11 +425,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
 			};
@@ -438,11 +443,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
 			};

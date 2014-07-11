@@ -9,6 +9,13 @@
 import UIKit
 
 class SoundGameVC: UIViewController {
+    
+    let audioController = PdAudioController();
+    
+    init(coder aDecoder: NSCoder!)
+    {
+        super.init(coder: aDecoder)
+    }
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -17,9 +24,24 @@ class SoundGameVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var initialPitch = arc4random() % 901 + 100; //generate random int between 100-10000
+        println(initialPitch);
+        audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
+        PdBase.setDelegate(self);
+        runPatch();
+        audioController.print();
+        
+        PdBase.sendFloat(Float(initialPitch), toReceiver: "number");
+        
     }
+    
+    func runPatch() -> Void {
+        let fileName = "test4.pd";
+        let bp = NSBundle.mainBundle().bundlePath;
+        PdBase.openFile(String(fileName), path: bp);
+        audioController.active = true;
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

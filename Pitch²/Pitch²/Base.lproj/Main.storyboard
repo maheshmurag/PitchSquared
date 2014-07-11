@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
@@ -128,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="-132" y="958"/>
         </scene>
-        <!--View Controller-->
+        <!--Sound GameVC-->
         <scene sceneID="3Cq-e1-Neg">
             <objects>
-                <viewController id="v82-4m-a3d" sceneMemberID="viewController">
+                <viewController id="v82-4m-a3d" customClass="SoundGameVC" customModule="Pitch_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hrt-na-bYN"/>
                         <viewControllerLayoutGuide type="bottom" id="HXG-rb-fR6"/>
