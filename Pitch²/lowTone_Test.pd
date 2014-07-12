@@ -1,0 +1,96 @@
+#N canvas 0 22 1083 679 10;
+#X obj -2132 -1919 +~;
+#X obj -2117 -1948 *~;
+#X obj -1684 -1878 line~;
+#X msg -1684 -1901 \$1 10;
+#X obj -2007 -1832 line~;
+#X obj -2103 -2029 nbx 4 14 -1e+37 1e+37 0 1 empty modulator empty
+0 -8 0 10 -204800 -1 -1 0 256;
+#X obj -1684 -1921 nbx 4 14 0 1e+37 0 1 empty index empty 0 -8 0 10
+-204786 -1 -1 0 256;
+#X obj -2132 -2052 nbx 4 14 -1e+37 1e+37 0 1 empty carrier empty 0
+-8 0 10 -232576 -1 -1 484.785 256;
+#X text -2141 -2074 carrier;
+#X obj -2130 -1627 dac~;
+#X obj -2117 -1999 *~;
+#X obj -2054 -1972 *~;
+#X text -2093 -2015 Harmonicity;
+#X obj -1802 -1934 vline~;
+#X obj -1946 -1937 vline~;
+#X obj -2007 -1795 *~;
+#X obj -1946 -2021 nbx 5 14 -1e+37 1e+37 0 0 empty index empty 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj -1802 -2045 nbx 5 14 -1e+37 1e+37 0 0 empty duration empty 0
+-8 0 10 -262144 -1 -1 0 256;
+#X obj -1946 -1997 pack f f;
+#X msg -1946 -1968 \$1 \, 0 \$2;
+#X obj -2132 -1786 *~;
+#X obj -1488 -1860 noise~;
+#X obj -1488 -1741 dac~;
+#X obj -1398 -1804 line~;
+#X obj -1488 -1779 *~;
+#X obj -1398 -1896 nbx 4 14 0 1e+37 0 1 empty static empty 0 -8 0 10
+-204786 -1 -1 100 256;
+#X text -1392 -1917 static;
+#X obj -1398 -1865 * 0.01;
+#X msg -1398 -1827 \$1 500 \, 0 500;
+#X obj -1488 -1836 hip~ 5000;
+#X obj -2117 -1973 osc~;
+#X text -1993 -1542 My attempt at making a Violin (use phasor (30%
+there));
+#X text -1665 -2028 for violin: 0.5 700 \, 0 \$1 500;
+#X obj -2133 -1854 osc~;
+#X obj -2103 -1853 phasor~;
+#X obj -2133 -1738 lop~ 500;
+#X obj -2132 -1693 hip~ 400;
+#X msg -2142 -1507 \; carrier \$1 \; modulator 0 \; index 0 \; duration
+1000 \;;
+#X text -1685 -1944 index;
+#X text -1666 -2011 for pseudo-xylophone: 0.7 0 \, 0 \$1 100;
+#X msg -1801 -2002 0.5 700 \, 0 1300 500;
+#X obj -2110 -1600 r number;
+#X msg -2007 -1862 100 10;
+#X msg -1906 -1726 \; carrier 450 \; modulator 0 \; index 10 \; duration
+300 \;;
+#X obj -2005 -2083 loadbang, f 23;
+#X obj -1987 -2047 delay 300;
+#X connect 0 0 34 0;
+#X connect 1 0 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 15 0;
+#X connect 5 0 10 1;
+#X connect 6 0 3 0;
+#X connect 7 0 0 0;
+#X connect 7 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 0 30 0;
+#X connect 11 0 1 1;
+#X connect 13 0 15 1;
+#X connect 14 0 11 1;
+#X connect 15 0 20 1;
+#X connect 16 0 18 0;
+#X connect 17 0 18 1;
+#X connect 17 0 40 0;
+#X connect 17 0 40 0;
+#X connect 18 0 19 0;
+#X connect 19 0 14 0;
+#X connect 20 0 35 0;
+#X connect 21 0 29 0;
+#X connect 24 0 22 0;
+#X connect 24 0 22 1;
+#X connect 25 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 23 0;
+#X connect 29 0 24 0;
+#X connect 30 0 1 0;
+#X connect 34 0 20 0;
+#X connect 35 0 36 0;
+#X connect 36 0 9 1;
+#X connect 36 0 9 0;
+#X connect 40 0 13 0;
+#X connect 40 0 13 0;
+#X connect 41 0 37 0;
+#X connect 42 0 4 0;
+#X connect 44 0 45 0;
+#X connect 45 0 16 0;
+#X connect 45 0 40 0;

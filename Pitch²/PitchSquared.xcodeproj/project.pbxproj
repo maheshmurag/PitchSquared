@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4C0B611970FDC600988616 /* lowTone_Test.pd in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C0B601970FDC600988616 /* lowTone_Test.pd */; };
+		3F4C0B621970FF2C00988616 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4C0B5B1970FBCF00988616 /* libpd-ios.a */; };
 		9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717045D196CA22200EADBFB /* AppDelegate.swift */; };
 		97170463196CA22200EADBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97170461196CA22200EADBFB /* Main.storyboard */; };
 		97170465196CA22200EADBFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97170464196CA22200EADBFB /* Images.xcassets */; };
@@ -15,7 +17,6 @@
 		971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 971D2185196D3AA500EA559B /* PitchIcon76.png */; };
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
-		9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743ED6319705E07009FC5B9 /* libpd-ios.a */; };
 		9743ED6C19706400009FC5B9 /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 9743ED6B19706400009FC5B9 /* violin.pd */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
@@ -25,6 +26,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3F4C0B5A1970FBCF00988616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+		3F4C0B5C1970FBCF00988616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
+		};
+		3F4C0B5E1970FBDF00988616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
 		9717046B196CA22200EADBFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97170450196CA22200EADBFB /* Project object */;
@@ -32,30 +54,11 @@
 			remoteGlobalIDString = 97170457196CA22200EADBFB;
 			remoteInfo = "Pitch²";
 		};
-		9743ED6219705E07009FC5B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "libpd-ios";
-		};
-		9743ED6419705E07009FC5B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 119013AB1486450C00086F19;
-			remoteInfo = "libpd-osx";
-		};
-		9743ED6619705E0D009FC5B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "libpd-ios";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F4C0B601970FDC600988616 /* lowTone_Test.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lowTone_Test.pd; sourceTree = "<group>"; };
+		3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97170458196CA22200EADBFB /* PitchSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9717045D196CA22200EADBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		971D2185196D3AA500EA559B /* PitchIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PitchIcon76.png; sourceTree = "<group>"; };
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		9743ED6B19706400009FC5B9 /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -83,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */,
+				3F4C0B621970FF2C00988616 /* libpd-ios.a in Frameworks */,
 				97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */,
 				97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */,
 			);
@@ -99,16 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F4C0B561970FBCF00988616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F4C0B5B1970FBCF00988616 /* libpd-ios.a */,
+				3F4C0B5D1970FBCF00988616 /* libpd-osx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9717044F196CA22200EADBFB = {
 			isa = PBXGroup;
 			children = (
+				3F4C0B601970FDC600988616 /* lowTone_Test.pd */,
 				9743ED6B19706400009FC5B9 /* violin.pd */,
+				3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */,
 				97BED189196EFB7600766F5E /* AVFoundation.framework */,
 				97BED187196EFB7000766F5E /* AudioToolbox.framework */,
 				9717045A196CA22200EADBFB /* Pitch² */,
 				9717046D196CA22200EADBFB /* Pitch²Tests */,
 				97170459196CA22200EADBFB /* Products */,
-				9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,15 +177,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9743ED5E19705E07009FC5B9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9743ED6319705E07009FC5B9 /* libpd-ios.a */,
-				9743ED6519705E07009FC5B9 /* libpd-osx.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,7 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9743ED6719705E0D009FC5B9 /* PBXTargetDependency */,
+				3F4C0B5F1970FBDF00988616 /* PBXTargetDependency */,
 			);
 			name = PitchSquared;
 			productName = "Pitch²";
@@ -245,8 +248,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9743ED5E19705E07009FC5B9 /* Products */;
-					ProjectRef = 9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */;
+					ProductGroup = 3F4C0B561970FBCF00988616 /* Products */;
+					ProjectRef = 3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -258,18 +261,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9743ED6319705E07009FC5B9 /* libpd-ios.a */ = {
+		3F4C0B5B1970FBCF00988616 /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = 9743ED6219705E07009FC5B9 /* PBXContainerItemProxy */;
+			remoteRef = 3F4C0B5A1970FBCF00988616 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9743ED6519705E07009FC5B9 /* libpd-osx.a */ = {
+		3F4C0B5D1970FBCF00988616 /* libpd-osx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-osx.a";
-			remoteRef = 9743ED6419705E07009FC5B9 /* PBXContainerItemProxy */;
+			remoteRef = 3F4C0B5C1970FBCF00988616 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -282,6 +285,7 @@
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
+				3F4C0B611970FDC600988616 /* lowTone_Test.pd in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
 				9743ED6C19706400009FC5B9 /* violin.pd in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
@@ -321,15 +325,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3F4C0B5F1970FBDF00988616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libpd-ios";
+			targetProxy = 3F4C0B5E1970FBDF00988616 /* PBXContainerItemProxy */;
+		};
 		9717046C196CA22200EADBFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 97170457196CA22200EADBFB /* PitchSquared */;
 			targetProxy = 9717046B196CA22200EADBFB /* PBXContainerItemProxy */;
-		};
-		9743ED6719705E0D009FC5B9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libpd-ios";
-			targetProxy = 9743ED6619705E0D009FC5B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,11 +438,15 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/student/Documents/pd-for-ios/libpd/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = PitchSquared;
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
+				USER_HEADER_SEARCH_PATHS = "/Users/student/Documents/pd-for-ios/libpd/**";
 			};
 			name = Debug;
 		};
@@ -452,10 +460,14 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/student/Documents/pd-for-ios/libpd/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = PitchSquared;
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
+				USER_HEADER_SEARCH_PATHS = "/Users/student/Documents/pd-for-ios/libpd/**";
 			};
 			name = Release;
 		};

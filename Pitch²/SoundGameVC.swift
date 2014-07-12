@@ -9,6 +9,9 @@
 import UIKit
 
 import CoreMotion
+
+
+
 class SoundGameVC: UIViewController {
     
     let audioController = PdAudioController();
@@ -72,10 +75,10 @@ class SoundGameVC: UIViewController {
         openAndRunTestPatch();
         audioController.print();
         
-        initPitch = Float(drand48());
-        initPitch * 1000 + 100;
-        println(initPitch);
-        PdBase.sendFloat(initPitch, toReceiver: "number");
+       // initPitch = Float(drand48());
+      //  initPitch * 1000 + 100;
+     //   println(initPitch);
+     //   PdBase.sendFloat(initPitch, toReceiver: "number");
         
         backButton.layer.cornerRadius = 5.0;
         backButton.layer.borderWidth = 2.0;
@@ -128,23 +131,9 @@ class SoundGameVC: UIViewController {
             
             self.audioController.active=true
             
-            PdBase.sendFloat(((strX).floatValue * 1000) + 100, toReceiver: "number")
-            println(strX.floatValue)
-            })
-        
-        /*
-        self.motionManager.gyroUpdateInterval = 0.2
-        
-        motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(gyroscopeData :     CMGyroData!, error : NSError!) in
-        
-        
-        self.glabelX.text = String("gX = \(gyroscopeData.rotationRate.x)");
-        self.glabelY.text = String("gY = \(gyroscopeData.rotationRate.y)");
-        self.glabelZ.text = String("gZ = \(gyroscopeData.rotationRate.z)");
-        
-        //PdBase.sendList(data, toReceiver:"gyroscope")
+            PdBase.sendFloat((fabsf(strX.floatValue) * 200)+300, toReceiver: "number")
+             println((fabsf(strX.floatValue) * 200)+300)
         })
-        */
     }
     
     func openAndRunTestPatch() -> Void {
