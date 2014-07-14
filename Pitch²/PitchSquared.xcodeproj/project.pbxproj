@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F4C0B611970FDC600988616 /* lowTone_Test.pd in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C0B601970FDC600988616 /* lowTone_Test.pd */; };
 		3F4C0B621970FF2C00988616 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4C0B5B1970FBCF00988616 /* libpd-ios.a */; };
+		3F9A650619747DFE000D9EE4 /* compatible_test.pd in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A650519747DFE000D9EE4 /* compatible_test.pd */; };
 		9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717045D196CA22200EADBFB /* AppDelegate.swift */; };
 		97170463196CA22200EADBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97170461196CA22200EADBFB /* Main.storyboard */; };
 		97170465196CA22200EADBFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97170464196CA22200EADBFB /* Images.xcassets */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3F4C0B601970FDC600988616 /* lowTone_Test.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lowTone_Test.pd; sourceTree = "<group>"; };
+		3F9A650519747DFE000D9EE4 /* compatible_test.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = compatible_test.pd; sourceTree = "<group>"; };
 		3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		97170458196CA22200EADBFB /* PitchSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		9717044F196CA22200EADBFB = {
 			isa = PBXGroup;
 			children = (
+				3F9A650519747DFE000D9EE4 /* compatible_test.pd */,
 				3F4C0B601970FDC600988616 /* lowTone_Test.pd */,
 				9743ED6B19706400009FC5B9 /* violin.pd */,
 				3F9DEDE81970FB8400206FAD /* libpd.xcodeproj */,
@@ -285,6 +288,7 @@
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
+				3F9A650619747DFE000D9EE4 /* compatible_test.pd in Resources */,
 				3F4C0B611970FDC600988616 /* lowTone_Test.pd in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
 				9743ED6C19706400009FC5B9 /* violin.pd in Resources */,

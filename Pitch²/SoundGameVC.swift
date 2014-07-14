@@ -131,13 +131,17 @@ class SoundGameVC: UIViewController {
             
             self.audioController.active=true
             
-            PdBase.sendFloat((fabsf(strX.floatValue) * 200)+300, toReceiver: "number")
-             println((fabsf(strX.floatValue) * 200)+300)
+            PdBase.sendFloat((fabsf(strX.floatValue) * 200)+300, toReceiver: "carrier")
+            //PdBase.sendFloat((fabsf(strY.floatValue) * 200)+300, toReceiver: "harmonicity")
+            PdBase.sendFloat(0.0, toReceiver: "harmonicity")
+            PdBase.sendFloat(0.0, toReceiver: "index")
+            PdBase.sendFloat(1000.0, toReceiver: "duration")
+            //println((fabsf(strX.floatValue) * 200)+300)
         })
     }
     
     func openAndRunTestPatch() -> Void {
-        let fileName = "violin.pd";
+        let fileName = "compatible_test.pd";
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;
