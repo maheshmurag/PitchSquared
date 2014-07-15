@@ -23,6 +23,7 @@ class SoundGameVC: UIViewController {
     @IBOutlet var debugL: UILabel
     @IBOutlet var calibrateButton: UIButton
     
+    @IBOutlet var countDown: UILabel
     var xVal : CDouble;
     var yVal : CDouble;
     var zVal : CDouble;
@@ -47,7 +48,6 @@ class SoundGameVC: UIViewController {
         initZ = 0;
         initPitch = 0;
         super.init(coder: aDecoder)
-        startAccelerationCollection()
         
     }
     
@@ -64,6 +64,10 @@ class SoundGameVC: UIViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,21 +76,20 @@ class SoundGameVC: UIViewController {
         openAndRunTestPatch();
         audioController.print();
         
-        initPitch = Float(drand48());
-        initPitch * 1000 + 100;
-        println(initPitch);
-        PdBase.sendFloat(initPitch, toReceiver: "number");
-        
         backButton.layer.cornerRadius = 5.0;
         backButton.layer.borderWidth = 2.0;
         backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
-        
-        startAccelerationCollection();
         
         self.calibrateButton.layer.cornerRadius = 5.0;
         self.calibrateButton.frame.size =  CGSizeMake(150, 30);
         self.calibrateButton.layer.borderWidth = 2.0;
         self.calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
+        
+        
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("animateCountDown"), userInfo: nil, repeats: false);
+        
+        var timer1 = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("playRandomPitch"), userInfo: nil, repeats: false);
         
     }
     
@@ -103,8 +106,51 @@ class SoundGameVC: UIViewController {
         
     }
     
+    func playRandomPitch() -> Void {
+        initPitch = (Float(arc4random() % 99 + 1)) / 100;
+        var pitch = initPitch * 900 + 100;
+        println(initPitch);
+        PdBase.sendFloat(pitch, toReceiver: "number");
+        
+        var timer1 = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
+    }
+    
     @IBAction func calibrateAction(sender: UIButton) {
         calibrate()
+    }
+    
+    func animateCountDown() -> Void {
+        UIView.animateWithDuration(0.5, animations: {
+            self.countDown.alpha = 1.0;
+        }, completion: {
+            (value: Bool) in
+            UIView.animateWithDuration(0.5, animations: {
+                self.countDown.alpha = 0.0;
+                }, completion: {
+                    (value: Bool)in
+                    UIView.animateWithDuration(0.5, animations: {
+                        self.countDown.text = String(2);
+                        self.countDown.alpha = 1.0;
+                        }, completion: {
+                            (value: Bool)in
+                            UIView.animateWithDuration(0.5, animations: {
+                                self.countDown.alpha = 0.0;
+                                }, completion: {
+                                    (value: Bool)in
+                                    UIView.animateWithDuration(0.5, animations: {
+                                        self.countDown.text = String(1);
+                                        self.countDown.alpha = 1.0;
+                                        }, completion: {
+                                            (value: Bool)in
+                                            UIView.animateWithDuration(0.5, animations: {
+                                                self.countDown.alpha = 0.0;
+                                                });
+                                        });
+                                });
+                        });
+                });
+
+        });
     }
     
     
@@ -128,7 +174,7 @@ class SoundGameVC: UIViewController {
             
             self.audioController.active=true
             
-            PdBase.sendFloat(((strX).floatValue * 1000) + 100, toReceiver: "number")
+            PdBase.sendFloat(((strX).floatValue * 900) + 100, toReceiver: "number")
             println(strX.floatValue)
             })
         
