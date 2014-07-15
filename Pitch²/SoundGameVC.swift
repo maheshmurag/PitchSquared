@@ -23,7 +23,8 @@ class SoundGameVC: UIViewController {
     @IBOutlet var debugL: UILabel
     @IBOutlet var calibrateButton: UIButton
     
-    @IBOutlet var countDown: UILabel
+    @IBOutlet var message: UILabel
+    
     var xVal : CDouble;
     var yVal : CDouble;
     var zVal : CDouble;
@@ -85,8 +86,6 @@ class SoundGameVC: UIViewController {
         self.calibrateButton.layer.borderWidth = 2.0;
         self.calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
         
-        
-        
         var timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("animateCountDown"), userInfo: nil, repeats: false);
         
         var timer1 = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("playRandomPitch"), userInfo: nil, repeats: false);
@@ -99,7 +98,6 @@ class SoundGameVC: UIViewController {
         yDiff = yVal;
         zDiff = zVal;
         
-        
         xVal -= xDiff
         yVal -= yDiff
         zVal -= zDiff
@@ -107,12 +105,40 @@ class SoundGameVC: UIViewController {
     }
     
     func playRandomPitch() -> Void {
-        initPitch = (Float(arc4random() % 99 + 1)) / 100;
-        var pitch = initPitch * 900 + 100;
-        println(initPitch);
-        PdBase.sendFloat(pitch, toReceiver: "number");
         
-        var timer1 = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
+        UIView.animateWithDuration(0.5, animations: {
+            self.message.font = UIFont(name: self.message.font.fontName, size: 40);
+            self.message.text = String("Pitch Playing!");
+            self.message.alpha = 1.0;
+        });
+        initPitch = (Float(arc4random() % 10)) / 10;
+        initPitch = initPitch * 100 + 100;
+        initPitch *= Float(arc4random() % 10);
+        println(initPitch);
+        PdBase.sendFloat(initPitch, toReceiver: "number");
+        
+        var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
+        
+        var timer3 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startGameMessage"), userInfo: nil, repeats: false)
+    }
+    
+    func startGameMessage() -> Void{
+        UIView.animateWithDuration(0.5, animations: {
+            self.message.alpha = 0.0;
+        }, completion: {
+            (value: Bool)in
+            self.message.text = String("Rotate the device to match the pitch!");
+            UIView.animateWithDuration(0.5, animations: {
+                self.message.alpha = 1.0;
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.5, delay: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.message.alpha = 0.0;
+                }, completion: {
+                    (value: Bool) in
+                });
+            });
+        });
     }
     
     @IBAction func calibrateAction(sender: UIButton) {
@@ -121,29 +147,29 @@ class SoundGameVC: UIViewController {
     
     func animateCountDown() -> Void {
         UIView.animateWithDuration(0.5, animations: {
-            self.countDown.alpha = 1.0;
+            self.message.alpha = 1.0;
         }, completion: {
             (value: Bool) in
             UIView.animateWithDuration(0.5, animations: {
-                self.countDown.alpha = 0.0;
+                self.message.alpha = 0.0;
                 }, completion: {
                     (value: Bool)in
                     UIView.animateWithDuration(0.5, animations: {
-                        self.countDown.text = String(2);
-                        self.countDown.alpha = 1.0;
+                        self.message.text = String(2);
+                        self.message.alpha = 1.0;
                         }, completion: {
                             (value: Bool)in
                             UIView.animateWithDuration(0.5, animations: {
-                                self.countDown.alpha = 0.0;
+                                self.message.alpha = 0.0;
                                 }, completion: {
                                     (value: Bool)in
                                     UIView.animateWithDuration(0.5, animations: {
-                                        self.countDown.text = String(1);
-                                        self.countDown.alpha = 1.0;
+                                        self.message.text = String(1);
+                                        self.message.alpha = 1.0;
                                         }, completion: {
                                             (value: Bool)in
                                             UIView.animateWithDuration(0.5, animations: {
-                                                self.countDown.alpha = 0.0;
+                                                self.message.alpha = 0.0;
                                                 });
                                         });
                                 });
@@ -155,16 +181,15 @@ class SoundGameVC: UIViewController {
     
     
     func startAccelerationCollection() -> Void{
-         motionManager.accelerometerUpdateInterval = 0.05
-        
+        motionManager.accelerometerUpdateInterval = 0.05
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
             self.xVal = accelerometerData.acceleration.x;
             self.yVal = accelerometerData.acceleration.y;
             self.zVal = accelerometerData.acceleration.z;
             
-            var strX = NSString(format: "%.2f", self.xVal-self.xDiff);
-            var strY = NSString(format: "%.2f", self.yVal-self.yDiff);
+            var strX = NSString(format: "%.1f", self.xVal-self.xDiff);
+            var strY = NSString(format: "%.1f", self.yVal-self.yDiff);
             var strZ = NSString(format: "%.2f", self.zVal-self.zDiff);
             
             self.alabelX.text =  strX
@@ -174,7 +199,14 @@ class SoundGameVC: UIViewController {
             
             self.audioController.active=true
             
-            PdBase.sendFloat(((strX).floatValue * 900) + 100, toReceiver: "number")
+            var pitch = (strX).floatValue * 100 + 100;
+            pitch *= (strY.floatValue * 10);
+            PdBase.sendFloat(pitch, toReceiver: "number")
+            if (fabsf(fabsf(pitch) - self.initPitch) < 50) {
+                self.view.backgroundColor = UIColor.greenColor();
+            } else {
+                self.view.backgroundColor = UIColor.whiteColor();
+            }
             println(strX.floatValue)
             })
         

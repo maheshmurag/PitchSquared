@@ -143,7 +143,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rND-Qg-uZb">
-                                <rect key="frame" x="291" y="446" width="187" height="132"/>
+                                <rect key="frame" x="0.0" y="446" width="768" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="152"/>
                                 <color key="textColor" red="0.25019137079999998" green="0.82262652849999995" blue="0.5821930421" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -159,7 +159,7 @@
                         <outlet property="alabelZ" destination="HvJ-Be-Z24" id="OKP-PG-wmL"/>
                         <outlet property="backButton" destination="9Fv-Pi-IN5" id="339-0Z-JZo"/>
                         <outlet property="calibrateButton" destination="pcl-p7-JVr" id="Ozg-vs-gGW"/>
-                        <outlet property="countDown" destination="rND-Qg-uZb" id="RF1-Hr-5bw"/>
+                        <outlet property="message" destination="rND-Qg-uZb" id="rQF-SS-zv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsG-W9-cqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
