@@ -205,7 +205,7 @@ class SoundGameVC: UIViewController {
             if (fabsf(fabsf(pitch) - self.initPitch) < 50) {
                 self.view.backgroundColor = UIColor.greenColor();
             } else {
-                self.view.backgroundColor = UIColor.whiteColor();
+                self.view.backgroundColor = UIColor(red: strX.floatValue, green: strY.floatValue, blue: strZ.floatValue, alpha: 1.0)
             }
             println(strX.floatValue)
             })
