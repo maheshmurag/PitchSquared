@@ -12,9 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    let audioController = PdAudioController();
+
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+        audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
+        PdBase.setDelegate(self);
+        openAndRunTestPatch();
+        audioController.print();
         
+
         return true
     }
 
@@ -38,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func openAndRunTestPatch() -> Void {
+        let fileName = "violin.pd";
+        let bp = NSBundle.mainBundle().bundlePath;
+        PdBase.openFile(String(fileName), path: bp);
+        audioController.active = true;
     }
 
 

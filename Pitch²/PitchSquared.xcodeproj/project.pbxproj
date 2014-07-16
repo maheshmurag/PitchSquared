@@ -16,7 +16,9 @@
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
 		9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743ED6319705E07009FC5B9 /* libpd-ios.a */; };
-		9743ED6C19706400009FC5B9 /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 9743ED6B19706400009FC5B9 /* violin.pd */; };
+		97A88D191975AD0B00C3383E /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D181975AD0B00C3383E /* X.png */; };
+		97A88D1C1975D75000C3383E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1B1975D75000C3383E /* check.png */; };
+		97A88D1E1976079800C3383E /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1D1976079800C3383E /* violin.pd */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -69,7 +71,9 @@
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
-		9743ED6B19706400009FC5B9 /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
+		97A88D181975AD0B00C3383E /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+		97A88D1B1975D75000C3383E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		97A88D1D1976079800C3383E /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -102,7 +106,7 @@
 		9717044F196CA22200EADBFB = {
 			isa = PBXGroup;
 			children = (
-				9743ED6B19706400009FC5B9 /* violin.pd */,
+				97A88D1D1976079800C3383E /* violin.pd */,
 				97BED189196EFB7600766F5E /* AVFoundation.framework */,
 				97BED187196EFB7000766F5E /* AudioToolbox.framework */,
 				9717045A196CA22200EADBFB /* Pitch² */,
@@ -141,6 +145,8 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97A88D1B1975D75000C3383E /* check.png */,
+				97A88D181975AD0B00C3383E /* X.png */,
 				971D2184196D3AA500EA559B /* PitchIcon.png */,
 				971D2185196D3AA500EA559B /* PitchIcon76.png */,
 				9717045C196CA22200EADBFB /* Info.plist */,
@@ -281,9 +287,11 @@
 			files = (
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
+				97A88D1C1975D75000C3383E /* check.png in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
+				97A88D1E1976079800C3383E /* violin.pd in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
-				9743ED6C19706400009FC5B9 /* violin.pd in Resources */,
+				97A88D191975AD0B00C3383E /* X.png in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
