@@ -15,7 +15,7 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
     @IBOutlet var squaredLabel: UILabel
     @IBOutlet var startCover: UIView
     @IBOutlet var highScoreCover: UIView
-    @IBOutlet var helpCover: UIView
+    @IBOutlet var helpCover: UIView 
     var popover: UIPopoverController;
     var popoverContent: UIViewController;
     

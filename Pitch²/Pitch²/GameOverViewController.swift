@@ -43,7 +43,9 @@ class GameOverViewController: UIViewController {
         var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults();
         defaults.setObject(pitchData.scoreArray, forKey: "scoreArray");
         NSUserDefaults.standardUserDefaults().synchronize();
-        
+    }
+    
+    override func viewDidAppear (animated: Bool)  {
         UIView.animateWithDuration(0.5, animations: {
             self.restart.frame = CGRect(x: 1024, y: self.restart.frame.origin.y , width: self.restart.frame.size.width, height: self.restart.frame.size.height)
             }, completion: {(value: Bool) in})
@@ -53,10 +55,6 @@ class GameOverViewController: UIViewController {
         UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.menu.frame = CGRect(x: 1024, y: self.menu.frame.origin.y , width: self.menu.frame.size.width, height: self.menu.frame.size.height)
             }, completion: {(value: Bool) in})
-    }
-    
-    override func viewDidAppear (animated: Bool)  {
-        
     }
 
     override func didReceiveMemoryWarning() {

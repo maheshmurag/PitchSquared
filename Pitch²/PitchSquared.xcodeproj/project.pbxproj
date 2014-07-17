@@ -22,6 +22,13 @@
 		97A88D20197642E200C3383E /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A88D1F197642E200C3383E /* GameOverViewController.swift */; };
 		97A88D221976450100C3383E /* XOutline.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D211976450100C3383E /* XOutline.png */; };
 		97A88D241976EC9200C3383E /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A88D231976EC9200C3383E /* GameModeViewController.swift */; };
+		97A88D2B19784E9300C3383E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A88D2A19784E9300C3383E /* TutorialViewController.swift */; };
+		97A88D2D19786B3800C3383E /* rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D2C19786B3800C3383E /* rotate.png */; };
+		97A88D2F19786C2100C3383E /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D2E19786C2100C3383E /* mic.png */; };
+		97A88D3119786FB000C3383E /* background1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D3019786FB000C3383E /* background1.jpeg */; };
+		97A88D33197870CB00C3383E /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D32197870CB00C3383E /* background2.jpg */; };
+		97A88D351978718F00C3383E /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D341978718F00C3383E /* background3.jpg */; };
+		97A88D37197871FB00C3383E /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D36197871FB00C3383E /* background4.jpg */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -80,6 +87,13 @@
 		97A88D1F197642E200C3383E /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		97A88D211976450100C3383E /* XOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XOutline.png; sourceTree = "<group>"; };
 		97A88D231976EC9200C3383E /* GameModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
+		97A88D2A19784E9300C3383E /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		97A88D2C19786B3800C3383E /* rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotate.png; sourceTree = "<group>"; };
+		97A88D2E19786C2100C3383E /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
+		97A88D3019786FB000C3383E /* background1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpeg; sourceTree = "<group>"; };
+		97A88D32197870CB00C3383E /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		97A88D341978718F00C3383E /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
+		97A88D36197871FB00C3383E /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -143,6 +157,7 @@
 				97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */,
 				97A88D1F197642E200C3383E /* GameOverViewController.swift */,
 				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
+				97A88D2A19784E9300C3383E /* TutorialViewController.swift */,
 				97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */,
 				97170464196CA22200EADBFB /* Images.xcassets */,
 				9717045B196CA22200EADBFB /* Supporting Files */,
@@ -153,6 +168,12 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97A88D36197871FB00C3383E /* background4.jpg */,
+				97A88D341978718F00C3383E /* background3.jpg */,
+				97A88D32197870CB00C3383E /* background2.jpg */,
+				97A88D3019786FB000C3383E /* background1.jpeg */,
+				97A88D2E19786C2100C3383E /* mic.png */,
+				97A88D2C19786B3800C3383E /* rotate.png */,
 				97A88D211976450100C3383E /* XOutline.png */,
 				97A88D1B1975D75000C3383E /* check.png */,
 				97A88D181975AD0B00C3383E /* X.png */,
@@ -295,14 +316,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
+				97A88D3119786FB000C3383E /* background1.jpeg in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97A88D1C1975D75000C3383E /* check.png in Resources */,
 				97A88D221976450100C3383E /* XOutline.png in Resources */,
+				97A88D33197870CB00C3383E /* background2.jpg in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
 				97A88D1E1976079800C3383E /* violin.pd in Resources */,
+				97A88D2D19786B3800C3383E /* rotate.png in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
+				97A88D37197871FB00C3383E /* background4.jpg in Resources */,
 				97A88D191975AD0B00C3383E /* X.png in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
+				97A88D2F19786C2100C3383E /* mic.png in Resources */,
+				97A88D351978718F00C3383E /* background3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +349,7 @@
 			files = (
 				97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */,
 				971D2189196D3B8900EA559B /* PitchData.swift in Sources */,
+				97A88D2B19784E9300C3383E /* TutorialViewController.swift in Sources */,
 				97A88D20197642E200C3383E /* GameOverViewController.swift in Sources */,
 				9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */,
 				97DA5FF8196F43CF00C1B660 /* SoundGameVC.swift in Sources */,
@@ -451,10 +479,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PitchSquared;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,10 +499,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PitchSquared;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";

@@ -145,21 +145,22 @@ class SoundGameVC: UIViewController {
     }
     
     func playRandomPitch() -> Void {
+        if (!gameExit) {
+            UIView.animateWithDuration(0.5, animations: {
+                self.message.font = UIFont(name: self.message.font.fontName, size: 40);
+                self.message.text = String("Pitch Playing!");
+                self.message.alpha = 1.0;
+                });
         
-        UIView.animateWithDuration(0.5, animations: {
-            self.message.font = UIFont(name: self.message.font.fontName, size: 40);
-            self.message.text = String("Pitch Playing!");
-            self.message.alpha = 1.0;
-        });
+            var index: Int = Int(arc4random() % 48);
+            initPitch = self.freqList[index];
+            println(initPitch);
+            PdBase.sendFloat(initPitch, toReceiver: "pitch");
         
-        var index: Int = Int(arc4random() % 48);
-        initPitch = self.freqList[index];
-        println(initPitch);
-        PdBase.sendFloat(initPitch, toReceiver: "pitch");
+            var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
-        var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
-        
-        var timer3 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startGameMessage"), userInfo: nil, repeats: false)
+            var timer3 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startGameMessage"), userInfo: nil, repeats: false)
+        }
     }
     
     func startGameMessage() -> Void{
@@ -272,8 +273,9 @@ class SoundGameVC: UIViewController {
     
     
     func startAccelerationCollection() -> Void{
-        motionManager.accelerometerUpdateInterval = 0.05
-        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
+        if (!gameExit) {
+            motionManager.accelerometerUpdateInterval = 0.05
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
             self.xVal = accelerometerData.acceleration.x;
             self.yVal = accelerometerData.acceleration.y;
@@ -359,6 +361,7 @@ class SoundGameVC: UIViewController {
         //PdBase.sendList(data, toReceiver:"gyroscope")
         })
         */
+        }
     }
     
     @IBAction func backAction(sender: UIButton) {

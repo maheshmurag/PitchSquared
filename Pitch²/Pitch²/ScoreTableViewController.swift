@@ -53,8 +53,11 @@ class ScoreTableViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         var pitchData: PitchData = PitchData.sharedInstance;
-        println(pitchData.scoreArray);
-        return pitchData.scoreArray.count;
+        if (pitchData.scoreArray.count < 15) {
+            return pitchData.scoreArray.count;
+        } else {
+            return 15;
+        }
     }
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
@@ -67,7 +70,6 @@ class ScoreTableViewController: UITableViewController {
         var scoreLabel:UILabel = cell.viewWithTag(2) as UILabel;
         scoreLabel.text = String(pitchData.scoreArray[indexPath.row]);
         
-
         return cell
     }
 
