@@ -16,15 +16,22 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
     @IBOutlet var startCover: UIView
     @IBOutlet var highScoreCover: UIView
     @IBOutlet var helpCover: UIView
+    var popover: UIPopoverController;
+    var popoverContent: UIViewController;
     
     init(coder aDecoder: NSCoder!)
     {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        self.popoverContent = storyboard.instantiateViewControllerWithIdentifier("GameMode") as UIViewController
+        self.popover = UIPopoverController(contentViewController: popoverContent)
         super.init(coder: aDecoder)
     }
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        self.popoverContent = storyboard.instantiateViewControllerWithIdentifier("GameMode") as UIViewController
+        self.popover = UIPopoverController(contentViewController: popoverContent)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Custom initialization
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -62,8 +69,6 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
     }
     
     @IBAction func showGameModes(sender: UIButton) {
-        var popoverContent = self.storyboard.instantiateViewControllerWithIdentifier("GameMode") as UIViewController
-        var popover:UIPopoverController = UIPopoverController(contentViewController: popoverContent)
         popoverContent.preferredContentSize = CGSizeMake(320 ,243);
         popover.delegate = self;
         popover.presentPopoverFromRect(sender.frame, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Up, animated: true);

@@ -28,18 +28,14 @@ class GameOverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var sgvc: SoundGameVC = SoundGameVC();
-//        sgvc.timer5.invalidate();
         var pitchData: PitchData = PitchData.sharedInstance;
         println(pitchData.score);
         self.scoreLabel.text =  NSString(format: "Score: %i", pitchData.score);
-        if(pitchData.highscore == 0) {
+        if(pitchData.highscore == 0 || pitchData.highscore < pitchData.score) {
             println(pitchData.highscore);
             pitchData.highscore = pitchData.score;
         }
         self.highScoreLabel.text = NSString(format: "High Score: %i", pitchData.highscore);
-        
-       // pitchData.scoreArray = [1, 2];
         pitchData.scoreArray.append(Int(pitchData.score));
         pitchData.scoreArray.sort({ $0 > $1 });
         println(pitchData.scoreArray);
@@ -47,9 +43,7 @@ class GameOverViewController: UIViewController {
         var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults();
         defaults.setObject(pitchData.scoreArray, forKey: "scoreArray");
         NSUserDefaults.standardUserDefaults().synchronize();
-    }
-    
-    override func viewDidAppear(animated: Bool)  {
+        
         UIView.animateWithDuration(0.5, animations: {
             self.restart.frame = CGRect(x: 1024, y: self.restart.frame.origin.y , width: self.restart.frame.size.width, height: self.restart.frame.size.height)
             }, completion: {(value: Bool) in})
@@ -60,7 +54,10 @@ class GameOverViewController: UIViewController {
             self.menu.frame = CGRect(x: 1024, y: self.menu.frame.origin.y , width: self.menu.frame.size.width, height: self.menu.frame.size.height)
             }, completion: {(value: Bool) in})
     }
-
+    
+    override func viewDidAppear (animated: Bool)  {
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
