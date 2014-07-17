@@ -9,17 +9,19 @@
 import UIKit
 
 class PitchData {
-    class var sharedInstance : PitchData {
-        get {
-            var onceToken : dispatch_once_t = dispatch_once_t(0)
-            var instance : PitchData! = nil
-            dispatch_once(&onceToken) {
-                instance = PitchData()
-            }
-            return instance
-        }
-    }
     var score:Int = 0;
     var highscore:Int = 0;
+    var scoreArray: Int[] = [];
+    
+    class var sharedInstance : PitchData {
+    struct Static {
+        static var onceToken : dispatch_once_t = 0
+        static var instance : PitchData? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = PitchData()
+        }
+        return Static.instance!
+    }
 }
 

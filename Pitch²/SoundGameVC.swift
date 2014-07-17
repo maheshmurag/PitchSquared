@@ -27,7 +27,8 @@ class SoundGameVC: UIViewController {
     @IBOutlet var X2: UIImageView
     @IBOutlet var X1: UIImageView
     @IBOutlet var check: UIImageView
-    
+    @IBOutlet var countDown: UILabel
+
     var xVal : CDouble;
     var yVal : CDouble;
     var zVal : CDouble;
@@ -42,24 +43,15 @@ class SoundGameVC: UIViewController {
     
     var scale : Int;
     var freq : Int;
-
-
     var initPitch: Float;
-    
-    @IBOutlet var countDown: UILabel
+
     var seconds: Int;
     var prevSecond: Int;
-    var pitchFound: Bool;
-    
-
+    var gameExit: Bool;
     var numWrong: Int;
-    
     var score: Int;
-    
     var timer5: NSTimer;
-    
     var prevScale : Int;
-    
     var round: Int;
     
     var freqList : Float[] = [110.0,116.54,123.47,130.81,138.59,146.83,155.56,164.81,174.61,185.00,196.00,207.65,220.0,233.08,246.94,261.63,277.18,293.66,311.13,329.63,349.23,369.99,392.63,415.30,440.00,466.16,493.88,523.25,554.37,587.33,622.25,659.25,698.46,739.99,783.99,830.61,880.0,932.33,987.77,1046.50,1108.73,1174.66,1244.51,1318.51,1396.91,1479.98,1661.22,1760.00];
@@ -72,9 +64,9 @@ class SoundGameVC: UIViewController {
         initY = 0;
         initZ = 0;
         initPitch = 0;
-        seconds = 15;
+        seconds = 10;
         prevSecond = seconds;
-        pitchFound = false;
+        gameExit = false;
         numWrong = 0;
         score = 0;
         timer5 = NSTimer();
@@ -93,9 +85,9 @@ class SoundGameVC: UIViewController {
         initY = 0;
         initZ = 0;
         initPitch = 0;
-        seconds = 15;
-        prevSecond = 15;
-        pitchFound = false;
+        seconds = 10;
+        prevSecond = seconds;
+        gameExit = false;
         numWrong = 0;
         score = 0;
         timer5 = NSTimer();
@@ -125,16 +117,20 @@ class SoundGameVC: UIViewController {
     
     func startNewGame() -> Void {
         round++;
+        if (!gameExit) {
+            self.timer5.invalidate();
+            
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("animateCountDown"), userInfo: nil, repeats: false);
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("animateCountDown"), userInfo: nil, repeats: false);
-        
-        var timer1 = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("playRandomPitch"), userInfo: nil, repeats: false);
+            var timer1 = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("playRandomPitch"), userInfo: nil, repeats: false);
+        }
     }
     
     func stopUpdates() -> Void{
         motionManager.stopAccelerometerUpdates();
         initPitch = 0
-        timer5.invalidate();
+        timer5.invalidate()
+        gameExit = true;
     }
     
     func calibrate() -> Void{
@@ -152,12 +148,12 @@ class SoundGameVC: UIViewController {
     func playRandomPitch() -> Void {
         
         UIView.animateWithDuration(0.5, animations: {
-            self.message.font = UIFont(name: self.message.font.fontName, size: 50);
+            self.message.font = UIFont(name: self.message.font.fontName, size: 40);
             self.message.text = String("Pitch Playing!");
             self.message.alpha = 1.0;
         });
         
-        var index: Int = Int(arc4random() % 24 + 12);
+        var index: Int = Int(arc4random() % 48);
 //        initPitch = (Float(arc4random() % 10)) / 10;
 //        initPitch = initPitch * 100 + 100;
 //        initPitch *= Float(arc4random() % 10);
@@ -190,50 +186,52 @@ class SoundGameVC: UIViewController {
         });
         
         timer5 = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countDownTimer"), userInfo: nil, repeats: true);
+        println("TIMER5: \(timer5)");
     }
     
     func countDownTimer() -> Void {
-        if(seconds <= 0)
-        {
+        if(seconds <= 0){
             numWrong++;
-            if (numWrong == 1)
-            {
-                UIView.animateWithDuration(0.5, animations:
-                    {
-                        self.X1.alpha = 1.0;
-                    });
+            if (numWrong == 1){
+                UIView.animateWithDuration(0.5, animations: {
+                    self.X1.alpha = 1.0;
+                });
+                timer5.invalidate();
+                if(prevSecond > 6) {
+                    prevSecond -= 2;
+                }
+                seconds = prevSecond;
+                motionManager.stopAccelerometerUpdates();
+                startNewGame();
+            } else if (numWrong == 2) {
+                UIView.animateWithDuration(0.5, animations: {
+                    self.X2.alpha = 1.0;
+                });
+                timer5.invalidate();
+                if(prevSecond > 6) {
+                    prevSecond -= 2;
+                }
+                seconds = prevSecond;
+                motionManager.stopAccelerometerUpdates();
+                startNewGame();
+            } else if (numWrong == 3) {
+                UIView.animateWithDuration(0.5, animations: {
+                    self.X3.alpha = 1.0;
+                    var pitchData: PitchData = PitchData.sharedInstance;
+                    pitchData.score = self.score;
+                }, completion: { (value: Bool)in} );
+                timer5.invalidate();
+                self.stopUpdates();
+                self.stopUpdates();
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+                let vc : GameOverViewController = storyboard.instantiateViewControllerWithIdentifier("GameOver") as GameOverViewController;
+                self.presentViewController(vc, animated: true, completion: nil)
             }
-            else if (numWrong == 2)
-            {
-                UIView.animateWithDuration(0.5, animations:
-                    {
-                        self.X2.alpha = 1.0;
-                    });
-            }
-            else
-            {
-                UIView.animateWithDuration(0.5, animations:
-                    {
-                        self.X3.alpha = 1.0;
-                    });
-            }
-            timer5.invalidate();
-            if(prevSecond > 10){
-                prevSecond -= 2;
-            }
-            seconds = prevSecond;
-            motionManager.stopAccelerometerUpdates();
-            startNewGame();
-            
-        }
-            
-        else
-        {
+        } else {
             seconds--;
             countDown.text = String(seconds);
         }
         
-        //println(timer);
     }
     
     @IBAction func calibrateAction(sender: UIButton) {
@@ -321,13 +319,10 @@ class SoundGameVC: UIViewController {
                 }
             }
             
-            //self.prevScale = scale;*/
-            //println("scale \(self.scale) freq: \(self.freq)");
             var superfreq : CFloat =  self.freqList[self.freq]
             PdBase.sendFloat(superfreq, toReceiver: "pitch")
             
             if (fabsf(superfreq) == self.initPitch) {
-                self.timer5.invalidate();
                 UIView.animateWithDuration(0.5, animations: {
                     self.check.alpha = 1.0
                 }, completion: {
@@ -340,9 +335,10 @@ class SoundGameVC: UIViewController {
                     });
                 });
                 
+                self.timer5.invalidate();
                 self.score += 100;
                 self.scoreLabel.text = String(self.score);
-                if(self.prevSecond > 10){
+                if(self.prevSecond > 6){
                     self.prevSecond -= 2;
                 }
                 self.seconds = self.prevSecond;
@@ -370,7 +366,7 @@ class SoundGameVC: UIViewController {
     }
     
     @IBAction func backAction(sender: UIButton) {
-        stopUpdates()
+        self.stopUpdates()
     }
 
     override func didReceiveMemoryWarning() {

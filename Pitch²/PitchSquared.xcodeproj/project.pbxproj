@@ -19,6 +19,9 @@
 		97A88D191975AD0B00C3383E /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D181975AD0B00C3383E /* X.png */; };
 		97A88D1C1975D75000C3383E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1B1975D75000C3383E /* check.png */; };
 		97A88D1E1976079800C3383E /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1D1976079800C3383E /* violin.pd */; };
+		97A88D20197642E200C3383E /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A88D1F197642E200C3383E /* GameOverViewController.swift */; };
+		97A88D221976450100C3383E /* XOutline.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D211976450100C3383E /* XOutline.png */; };
+		97A88D241976EC9200C3383E /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A88D231976EC9200C3383E /* GameModeViewController.swift */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -74,6 +77,10 @@
 		97A88D181975AD0B00C3383E /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 		97A88D1B1975D75000C3383E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		97A88D1D1976079800C3383E /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
+		97A88D1F197642E200C3383E /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		97A88D211976450100C3383E /* XOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XOutline.png; sourceTree = "<group>"; };
+		97A88D231976EC9200C3383E /* GameModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
+		97A88D251976FBE400C3383E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -133,8 +140,11 @@
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
 				971D218A196D3CA000EA559B /* MenuViewController.swift */,
+				97A88D231976EC9200C3383E /* GameModeViewController.swift */,
 				97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */,
+				97A88D1F197642E200C3383E /* GameOverViewController.swift */,
 				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
+				97A88D251976FBE400C3383E /* MyPlayground.playground */,
 				97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */,
 				97170464196CA22200EADBFB /* Images.xcassets */,
 				9717045B196CA22200EADBFB /* Supporting Files */,
@@ -145,6 +155,7 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97A88D211976450100C3383E /* XOutline.png */,
 				97A88D1B1975D75000C3383E /* check.png */,
 				97A88D181975AD0B00C3383E /* X.png */,
 				971D2184196D3AA500EA559B /* PitchIcon.png */,
@@ -288,6 +299,7 @@
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97A88D1C1975D75000C3383E /* check.png in Resources */,
+				97A88D221976450100C3383E /* XOutline.png in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
 				97A88D1E1976079800C3383E /* violin.pd in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
@@ -312,9 +324,11 @@
 			files = (
 				97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */,
 				971D2189196D3B8900EA559B /* PitchData.swift in Sources */,
+				97A88D20197642E200C3383E /* GameOverViewController.swift in Sources */,
 				9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */,
 				97DA5FF8196F43CF00C1B660 /* SoundGameVC.swift in Sources */,
 				971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */,
+				97A88D241976EC9200C3383E /* GameModeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

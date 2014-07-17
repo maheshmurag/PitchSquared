@@ -35,7 +35,7 @@ class ScoreTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,15 +52,20 @@ class ScoreTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 15
+        var pitchData: PitchData = PitchData.sharedInstance;
+        println(pitchData.scoreArray);
+        return pitchData.scoreArray.count;
     }
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
+        var pitchData: PitchData = PitchData.sharedInstance;
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ScoreCell", forIndexPath: indexPath) as UITableViewCell
         var indexLabel:UILabel = cell.viewWithTag(1) as UILabel;
         var indexNum:Int = indexPath.row + 1;
         indexLabel.text = String("\(indexNum).");
         
+        var scoreLabel:UILabel = cell.viewWithTag(2) as UILabel;
+        scoreLabel.text = String(pitchData.scoreArray[indexPath.row]);
         
 
         return cell

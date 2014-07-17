@@ -48,16 +48,21 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var pitchData:PitchData = PitchData.sharedInstance;
-//        pitchData.score = 10;
-//        println("\(pitchData.score)")
-        
-        //Cool Animations
+        var pitchData: PitchData = PitchData.sharedInstance;
+        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        if let array = defaults.objectForKey("scoreArray") as? Int[]{
+            pitchData.scoreArray = array;
+            pitchData.highscore = array[0];
+            println("WEFRWGRWQGQWREGQWREGQERGQERG");
+            println(pitchData.scoreArray.count);
+        }else{
             
-        
+            pitchData.scoreArray = [];
+        }
     }
+    
     @IBAction func reset(sender: UIButton) {
-        self.pitchTitle.frame = CGRect(x: 278, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
+//        self.pitchTitle.frame = CGRect(x: 278, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
     }
 
     override func didReceiveMemoryWarning() {
