@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UIPopoverControllerDelegate {
     
     @IBOutlet var pitchTitle: UILabel
     @IBOutlet var squaredLabel: UILabel
@@ -26,7 +26,7 @@ class MenuViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.pitchTitle.frame = CGRect(x: 267, y: self.pitchTitle.frame.origin.y , width: self.pitchTitle.frame.size.width, height: self.pitchTitle.frame.size.height)
@@ -59,6 +59,14 @@ class MenuViewController: UIViewController {
             
             pitchData.scoreArray = [];
         }
+    }
+    
+    @IBAction func showGameModes(sender: UIButton) {
+        var popoverContent = self.storyboard.instantiateViewControllerWithIdentifier("GameMode") as UIViewController
+        var popover:UIPopoverController = UIPopoverController(contentViewController: popoverContent)
+        popoverContent.preferredContentSize = CGSizeMake(320 ,243);
+        popover.delegate = self;
+        popover.presentPopoverFromRect(sender.frame, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Up, animated: true);
     }
     
     @IBAction func reset(sender: UIButton) {

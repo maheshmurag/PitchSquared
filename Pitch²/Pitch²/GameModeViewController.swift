@@ -8,13 +8,33 @@
 
 import UIKit
 
+
 class GameModeViewController: UIViewController {
+    
+    @IBOutlet var matching: UIButton
+    @IBOutlet var freeplay: UIButton
+    
+    init(coder aDecoder: NSCoder!)
+    {
+        super.init(coder: aDecoder)
+    }
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
+        self.contentSizeForViewInPopover = CGSizeMake(320, 243);
     }
 
+    override func viewDidAppear(animated: Bool)  {
+        UIView.animateWithDuration(0.5, animations: {
+            self.matching.frame = CGRect(x: 1024, y: self.matching.frame.origin.y , width: self.matching.frame.size.width, height: self.matching.frame.size.height)
+            }, completion: {(value: Bool) in})
+        UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.freeplay.frame = CGRect(x: 1024, y: self.freeplay.frame.origin.y , width: self.freeplay.frame.size.width, height: self.freeplay.frame.size.height)
+            }, completion: {(value: Bool) in})
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                  

@@ -80,7 +80,6 @@
 		97A88D1F197642E200C3383E /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		97A88D211976450100C3383E /* XOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XOutline.png; sourceTree = "<group>"; };
 		97A88D231976EC9200C3383E /* GameModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
-		97A88D251976FBE400C3383E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -144,7 +143,6 @@
 				97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */,
 				97A88D1F197642E200C3383E /* GameOverViewController.swift */,
 				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
-				97A88D251976FBE400C3383E /* MyPlayground.playground */,
 				97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */,
 				97170464196CA22200EADBFB /* Images.xcassets */,
 				9717045B196CA22200EADBFB /* Supporting Files */,

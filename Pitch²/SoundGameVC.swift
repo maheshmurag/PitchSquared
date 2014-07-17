@@ -107,10 +107,9 @@ class SoundGameVC: UIViewController {
         backButton.layer.borderWidth = 2.0;
         backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
         
-        self.calibrateButton.layer.cornerRadius = 5.0;
-        self.calibrateButton.frame.size =  CGSizeMake(150, 30);
-        self.calibrateButton.layer.borderWidth = 2.0;
-        self.calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
+        calibrateButton.layer.cornerRadius = 5.0;
+        calibrateButton.layer.borderWidth = 2.0;
+        calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
         
         startNewGame();
     }
@@ -154,9 +153,6 @@ class SoundGameVC: UIViewController {
         });
         
         var index: Int = Int(arc4random() % 48);
-//        initPitch = (Float(arc4random() % 10)) / 10;
-//        initPitch = initPitch * 100 + 100;
-//        initPitch *= Float(arc4random() % 10);
         initPitch = self.freqList[index];
         println(initPitch);
         PdBase.sendFloat(initPitch, toReceiver: "pitch");
