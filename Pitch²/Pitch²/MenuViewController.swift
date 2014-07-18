@@ -20,6 +20,7 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
     @IBOutlet var startLabel: UILabel
     @IBOutlet var scoresLabel: UILabel
     @IBOutlet var helpLabel: UILabel
+    @IBOutlet var lineView: UIView
     
 //    @IBOutlet var startCover: UIView
 //    @IBOutlet var highScoreCover: UIView
@@ -50,6 +51,7 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
                 UIView.animateWithDuration(0.5, animations: {
                     self.squaredLabel.alpha = 1.0;
                     self.start.alpha = 1.0;
+                    self.lineView.frame = CGRect(x: 153, y: self.lineView.frame.origin.y, width: self.lineView.frame.size.width, height: self.lineView.frame.size.height);
                 }, completion: {(value: Bool) in})
                 UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.scores.alpha = 1.0;
@@ -83,6 +85,13 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
             
             pitchData.scoreArray = [];
         }
+        
+//        var string = NSBundle.mainBundle().resourcePath;
+//        var fileManager = NSFileManager.defaultManager();
+//        println(string);
+//        println(fileManager.directoryContentsAtPath(string));
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        println(paths);
     }
     
     @IBAction func showGameModes(sender: UIButton) {

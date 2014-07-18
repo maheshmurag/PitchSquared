@@ -36,6 +36,9 @@
 		97A88D39197895F600C3383E /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D38197895F600C3383E /* splash.png */; };
 		97ACAF85197901A100BA4FB2 /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */; };
 		97ACAF881979099D00BA4FB2 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF871979099D00BA4FB2 /* menu.png */; };
+		97ACAF8B197993FF00BA4FB2 /* recordStop.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF89197993FF00BA4FB2 /* recordStop.png */; };
+		97ACAF8C197993FF00BA4FB2 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF8A197993FF00BA4FB2 /* record.png */; };
+		97ACAF8E19799F9400BA4FB2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF8D19799F9400BA4FB2 /* play.png */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -108,6 +111,9 @@
 		97A88D38197895F600C3383E /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu2ViewController.swift; sourceTree = "<group>"; };
 		97ACAF871979099D00BA4FB2 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		97ACAF89197993FF00BA4FB2 /* recordStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recordStop.png; sourceTree = "<group>"; };
+		97ACAF8A197993FF00BA4FB2 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		97ACAF8D19799F9400BA4FB2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +190,9 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97ACAF8D19799F9400BA4FB2 /* play.png */,
+				97ACAF89197993FF00BA4FB2 /* recordStop.png */,
+				97ACAF8A197993FF00BA4FB2 /* record.png */,
 				97ACAF871979099D00BA4FB2 /* menu.png */,
 				9767F4C31978E87200D1B33F /* help.png */,
 				9767F4BF1978E56400D1B33F /* trophy.png */,
@@ -338,11 +347,14 @@
 			files = (
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				9767F4BE1978E0CA00D1B33F /* start.png in Resources */,
+				97ACAF8C197993FF00BA4FB2 /* record.png in Resources */,
+				97ACAF8B197993FF00BA4FB2 /* recordStop.png in Resources */,
 				97A88D3119786FB000C3383E /* background1.jpeg in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97A88D1C1975D75000C3383E /* check.png in Resources */,
 				97A88D221976450100C3383E /* XOutline.png in Resources */,
 				97A88D33197870CB00C3383E /* background2.jpg in Resources */,
+				97ACAF8E19799F9400BA4FB2 /* play.png in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
 				97A88D1E1976079800C3383E /* violin.pd in Resources */,
 				97A88D39197895F600C3383E /* splash.png in Resources */,

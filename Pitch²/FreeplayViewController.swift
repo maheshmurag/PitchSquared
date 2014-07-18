@@ -18,11 +18,19 @@ class FreeplayViewController: UIViewController {
     var zVal : CDouble = 0;
     @IBOutlet var backButton: UIButton
     @IBOutlet var calibrateButton: UIButton
+    @IBOutlet var record: UIButton
+    var recordOn: Bool;
     var xDiff : CDouble = 0;
     var yDiff : CDouble = 0;
+    
     var zDiff : CDouble = 0;
     var freq : Int = 0
     var scale : Int = 0
+    
+    var prevRec: Bool;
+    
+    var hasRec : Bool = false;
+
     
     var freqList : Float[] = [110.0,116.54,123.47,130.81,138.59,146.83,155.56,164.81,174.61,185.00,196.00,207.65,220.0,233.08,246.94,261.63,277.18,293.66,311.13,329.63,349.23,369.99,392.63,415.30,440.00,466.16,493.88,523.25,554.37,587.33,622.25,659.25,698.46,739.99,783.99,830.61,880.0,932.33,987.77,1046.50,1108.73,1174.66,1244.51,1318.51,1396.91,1479.98,1567.98,1661.22,1760.00];
     
@@ -34,6 +42,8 @@ class FreeplayViewController: UIViewController {
     init(coder aDecoder: NSCoder!)
     {
         // freqToNote = [440.0: "A4", 466.16: "As4"]
+        recordOn = false;
+        self.prevRec = false;
         super.init(coder: aDecoder)
     }
     
@@ -48,6 +58,8 @@ class FreeplayViewController: UIViewController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         
+        recordOn = false;
+        self.prevRec = false;
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -76,6 +88,8 @@ class FreeplayViewController: UIViewController {
     
     func startAccelerationCollection() -> Void{
         motionManager.accelerometerUpdateInterval = 0.05
+        
+        
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
             self.xVal = accelerometerData.acceleration.x;
@@ -121,23 +135,22 @@ class FreeplayViewController: UIViewController {
                     
                 });
             if(self.playButton.touchInside)
-                
-            {println("button pressed")
+            {//println("button pressed")
                 PdBase.sendFloat(superfreq, toReceiver: "pitch")
-                
+                if(self.recordOn){
+                    //self.timeMeasure.updateValue(NSString(format: "%.2f", superfreq).floatValue, forKey: self.diffMill());
+                }
                 //self.playButton.titleLabel.text="";
                 //self.playButton.titleLabel.text=self.freqListNote[superfreq];
                 //self.playButton.titleLabel.sizeThatFits(CGSize(width: 300, height:150))
                 //record sound to pd
             }
             else{
-                println("button let go")
+                //println("button let go")
                 PdBase.sendFloat(0.0,toReceiver: "pitch")
             }
-            println("\(self.freq)");
-            })
+        })
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,6 +167,40 @@ class FreeplayViewController: UIViewController {
         
         
         
+    }
+    
+    @IBAction func recording(sender: UIButton) {
+        if(!recordOn) {
+            UIView.animateWithDuration(0.5, animations: {
+                self.record.setImage(UIImage(named: "recordStop"), forState: UIControlState.Normal)
+                self.recordOn = !self.recordOn;
+            });
+        } else {
+            UIView.animateWithDuration(0.5, animations: {
+                self.record.setImage(UIImage(named: "record"), forState: UIControlState.Normal)
+                self.recordOn = !self.recordOn;
+            });
+        }
+        
+        if(recordOn){
+            PdBase.sendFloat(20000, toReceiver:"recLen" )
+            PdBase.sendBangToReceiver("rec")
+        }
+        else if(recordOn != true && prevRec == true){
+            
+            PdBase.sendBangToReceiver("stop")
+            hasRec = true;
+            
+        }
+        prevRec = recordOn
+
+    }
+    
+    @IBAction func playbackAction(sender: AnyObject) {
+        if(hasRec){
+            
+            PdBase.sendBangToReceiver("replay")
+        }
     }
     
     override func didReceiveMemoryWarning() {
