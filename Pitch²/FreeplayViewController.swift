@@ -125,8 +125,6 @@ class FreeplayViewController: UIViewController {
                 }
             }
             
-            
-            
             var superfreq : CFloat =  self.freqList[self.freq]
             self.playButton.setTitle(self.freqListNote[superfreq], forState: UIControlState.Normal);
             self.playButton.setTitle(self.freqListNote[superfreq], forState: UIControlState.Highlighted);
@@ -165,7 +163,10 @@ class FreeplayViewController: UIViewController {
         calibrateButton.layer.borderWidth = 2.0;
         calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
         
-        
+        var paths = "/Users/cluster5/Desktop/hi.wav"
+        //        paths = paths.stringByAppendingString("/hi");
+        println(paths);
+        PdBase.sendMessage(paths, withArguments: nil, toReceiver: "fileLoc");
         
     }
     
@@ -183,7 +184,7 @@ class FreeplayViewController: UIViewController {
         }
         
         if(recordOn){
-            PdBase.sendFloat(20000, toReceiver:"recLen" )
+            PdBase.sendFloat(20000, toReceiver:"recLen")
             PdBase.sendBangToReceiver("rec")
         }
         else if(recordOn != true && prevRec == true){
@@ -197,8 +198,11 @@ class FreeplayViewController: UIViewController {
     }
     
     @IBAction func playbackAction(sender: AnyObject) {
+//        var paths = "/Users/cluster5/hi"
+//        paths = paths.stringByAppendingString("/hi");
+//        println(paths);
+//        PdBase.sendMessage(paths, withArguments: nil, toReceiver: "fileLoc");
         if(hasRec){
-            
             PdBase.sendBangToReceiver("replay")
         }
     }

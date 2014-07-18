@@ -90,8 +90,7 @@ class MenuViewController: UIViewController, UIPopoverControllerDelegate {
 //        var fileManager = NSFileManager.defaultManager();
 //        println(string);
 //        println(fileManager.directoryContentsAtPath(string));
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        println(paths);
+        
     }
     
     @IBAction func showGameModes(sender: UIButton) {
