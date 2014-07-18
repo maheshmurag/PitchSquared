@@ -28,6 +28,8 @@ class SoundGameVC: UIViewController {
     @IBOutlet var X1: UIImageView
     @IBOutlet var check: UIImageView
     @IBOutlet var countDown: UILabel
+    
+    @IBOutlet var sMode: UISwitch
 
     var xVal : CDouble;
     var yVal : CDouble;
@@ -343,7 +345,18 @@ class SoundGameVC: UIViewController {
                 self.motionManager.stopAccelerometerUpdates();
                 self.startNewGame();
             } else {
-              //self.view.backgroundColor = UIColor(red: strX.floatValue, green: strY.floatValue, blue: strZ.floatValue, alpha: 1.0);
+                if (self.sMode.on) {
+                    UIView.animateWithDuration(0.1, animations: {
+                        self.view.backgroundColor = UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0);
+                    });
+                    
+                } else {
+                    UIView.animateWithDuration(0.1, animations: {
+                        self.view.backgroundColor = UIColor.whiteColor()
+                    });
+                    
+                }
+
             }
            
             })

@@ -16,6 +16,10 @@
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
 		9743ED6819705E11009FC5B9 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743ED6319705E07009FC5B9 /* libpd-ios.a */; };
+		9767F4BC1978B08B00D1B33F /* FreeplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */; };
+		9767F4BE1978E0CA00D1B33F /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4BD1978E0CA00D1B33F /* start.png */; };
+		9767F4C01978E56400D1B33F /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4BF1978E56400D1B33F /* trophy.png */; };
+		9767F4C41978E87200D1B33F /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4C31978E87200D1B33F /* help.png */; };
 		97A88D191975AD0B00C3383E /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D181975AD0B00C3383E /* X.png */; };
 		97A88D1C1975D75000C3383E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1B1975D75000C3383E /* check.png */; };
 		97A88D1E1976079800C3383E /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D1D1976079800C3383E /* violin.pd */; };
@@ -29,6 +33,9 @@
 		97A88D33197870CB00C3383E /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D32197870CB00C3383E /* background2.jpg */; };
 		97A88D351978718F00C3383E /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D341978718F00C3383E /* background3.jpg */; };
 		97A88D37197871FB00C3383E /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D36197871FB00C3383E /* background4.jpg */; };
+		97A88D39197895F600C3383E /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A88D38197895F600C3383E /* splash.png */; };
+		97ACAF85197901A100BA4FB2 /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */; };
+		97ACAF881979099D00BA4FB2 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF871979099D00BA4FB2 /* menu.png */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97BED188196EFB7000766F5E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED187196EFB7000766F5E /* AudioToolbox.framework */; };
 		97BED18A196EFB7600766F5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED189196EFB7600766F5E /* AVFoundation.framework */; };
@@ -81,6 +88,10 @@
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
+		9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeplayViewController.swift; path = ../FreeplayViewController.swift; sourceTree = "<group>"; };
+		9767F4BD1978E0CA00D1B33F /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		9767F4BF1978E56400D1B33F /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
+		9767F4C31978E87200D1B33F /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		97A88D181975AD0B00C3383E /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 		97A88D1B1975D75000C3383E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		97A88D1D1976079800C3383E /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
@@ -94,6 +105,9 @@
 		97A88D32197870CB00C3383E /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		97A88D341978718F00C3383E /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
 		97A88D36197871FB00C3383E /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
+		97A88D38197895F600C3383E /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu2ViewController.swift; sourceTree = "<group>"; };
+		97ACAF871979099D00BA4FB2 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		97BED187196EFB7000766F5E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -153,8 +167,10 @@
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
 				971D218A196D3CA000EA559B /* MenuViewController.swift */,
+				97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */,
 				97A88D231976EC9200C3383E /* GameModeViewController.swift */,
 				97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */,
+				9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */,
 				97A88D1F197642E200C3383E /* GameOverViewController.swift */,
 				97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */,
 				97A88D2A19784E9300C3383E /* TutorialViewController.swift */,
@@ -168,6 +184,11 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97ACAF871979099D00BA4FB2 /* menu.png */,
+				9767F4C31978E87200D1B33F /* help.png */,
+				9767F4BF1978E56400D1B33F /* trophy.png */,
+				9767F4BD1978E0CA00D1B33F /* start.png */,
+				97A88D38197895F600C3383E /* splash.png */,
 				97A88D36197871FB00C3383E /* background4.jpg */,
 				97A88D341978718F00C3383E /* background3.jpg */,
 				97A88D32197870CB00C3383E /* background2.jpg */,
@@ -316,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
+				9767F4BE1978E0CA00D1B33F /* start.png in Resources */,
 				97A88D3119786FB000C3383E /* background1.jpeg in Resources */,
 				97F5CF3D196F845B00D663EA /* test4.pd in Resources */,
 				97A88D1C1975D75000C3383E /* check.png in Resources */,
@@ -323,10 +345,14 @@
 				97A88D33197870CB00C3383E /* background2.jpg in Resources */,
 				97170463196CA22200EADBFB /* Main.storyboard in Resources */,
 				97A88D1E1976079800C3383E /* violin.pd in Resources */,
+				97A88D39197895F600C3383E /* splash.png in Resources */,
 				97A88D2D19786B3800C3383E /* rotate.png in Resources */,
 				971D2186196D3AA500EA559B /* PitchIcon.png in Resources */,
+				9767F4C41978E87200D1B33F /* help.png in Resources */,
 				97A88D37197871FB00C3383E /* background4.jpg in Resources */,
+				9767F4C01978E56400D1B33F /* trophy.png in Resources */,
 				97A88D191975AD0B00C3383E /* X.png in Resources */,
+				97ACAF881979099D00BA4FB2 /* menu.png in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
 				97A88D2F19786C2100C3383E /* mic.png in Resources */,
 				97A88D351978718F00C3383E /* background3.jpg in Resources */,
@@ -349,6 +375,8 @@
 			files = (
 				97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */,
 				971D2189196D3B8900EA559B /* PitchData.swift in Sources */,
+				97ACAF85197901A100BA4FB2 /* Menu2ViewController.swift in Sources */,
+				9767F4BC1978B08B00D1B33F /* FreeplayViewController.swift in Sources */,
 				97A88D2B19784E9300C3383E /* TutorialViewController.swift in Sources */,
 				97A88D20197642E200C3383E /* GameOverViewController.swift in Sources */,
 				9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */,

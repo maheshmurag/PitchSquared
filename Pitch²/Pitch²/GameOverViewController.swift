@@ -10,11 +10,16 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
-    @IBOutlet var restart: UIView
-    @IBOutlet var highScore: UIView
-    @IBOutlet var menu: UIView
     @IBOutlet var highScoreLabel: UILabel
     @IBOutlet var scoreLabel: UILabel
+    
+    @IBOutlet var scores: UIButton
+    @IBOutlet var help: UIButton
+    @IBOutlet var start: UIButton
+    
+    @IBOutlet var startLabel: UILabel
+    @IBOutlet var scoresLabel: UILabel
+    @IBOutlet var helpLabel: UILabel
     
     init(coder aDecoder: NSCoder!)
     {
@@ -45,16 +50,25 @@ class GameOverViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().synchronize();
     }
     
-    override func viewDidAppear (animated: Bool)  {
-        UIView.animateWithDuration(0.5, animations: {
-            self.restart.frame = CGRect(x: 1024, y: self.restart.frame.origin.y , width: self.restart.frame.size.width, height: self.restart.frame.size.height)
-            }, completion: {(value: Bool) in})
+    override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.highScore.frame = CGRect(x: 1024, y: self.highScore.frame.origin.y , width: self.highScore.frame.size.width, height: self.highScore.frame.size.height)
-            }, completion: {(value: Bool) in})
-        UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.menu.frame = CGRect(x: 1024, y: self.menu.frame.origin.y , width: self.menu.frame.size.width, height: self.menu.frame.size.height)
-            }, completion: {(value: Bool) in})
+                    self.start.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.scores.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.help.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.startLabel.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.scoresLabel.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.5, delay: 1.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.helpLabel.alpha = 1.0;
+                    }, completion: {(value: Bool) in})
     }
 
     override func didReceiveMemoryWarning() {
