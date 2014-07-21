@@ -360,20 +360,6 @@ class SoundGameVC: UIViewController {
             }
            
             })
-        
-        /*
-        self.motionManager.gyroUpdateInterval = 0.2
-        
-        motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(gyroscopeData :     CMGyroData!, error : NSError!) in
-        
-        
-        self.glabelX.text = String("gX = \(gyroscopeData.rotationRate.x)");
-        self.glabelY.text = String("gY = \(gyroscopeData.rotationRate.y)");
-        self.glabelZ.text = String("gZ = \(gyroscopeData.rotationRate.z)");
-        
-        //PdBase.sendList(data, toReceiver:"gyroscope")
-        })
-        */
         }
     }
     

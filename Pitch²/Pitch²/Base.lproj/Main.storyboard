@@ -50,15 +50,6 @@
                                     <segue destination="GeZ-Y5-awk" kind="show" id="zNf-LC-xYg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-Wa-XgX">
-                                <rect key="frame" x="460" y="648" width="150" height="150"/>
-                                <state key="normal" backgroundImage="help.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fit-NR-407" kind="show" id="CzP-tn-aYZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOT-Wj-1jl">
                                 <rect key="frame" x="363" y="605" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
@@ -66,13 +57,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Fy-JXe">
-                                <rect key="frame" x="201" y="797" width="65" height="28"/>
+                                <rect key="frame" x="201" y="804" width="65" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.38941491169999998" green="0.38941491169999998" blue="0.38941491169999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-mQ-A3f">
-                                <rect key="frame" x="515" y="797" width="41" height="28"/>
+                                <rect key="frame" x="515" y="804" width="41" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.38941491169999998" green="0.38941491169999998" blue="0.38941491169999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -83,6 +74,15 @@
                                 <color key="textColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-Wa-XgX">
+                                <rect key="frame" x="460" y="648" width="150" height="150"/>
+                                <state key="normal" backgroundImage="help.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fit-NR-407" kind="show" id="CzP-tn-aYZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUn-nm-jOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="-150"/>
+            <point key="canvasLocation" x="873" y="889.5"/>
         </scene>
         <!--Sound GameVC-->
         <scene sceneID="3Cq-e1-Neg">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsG-W9-cqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-1537"/>
+            <point key="canvasLocation" x="1948" y="-1497"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="3Iz-ZJ-pR6">
@@ -392,18 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oH-9C-nph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915" y="-1537"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="K4n-BM-x7P">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="R7u-Ek-6fj" sceneMemberID="viewController">
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Meb-AT-AUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="974" y="3333"/>
+            <point key="canvasLocation" x="3291" y="-1529"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="opr-vn-LH3">
@@ -525,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qvl-IP-iok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="2149"/>
+            <point key="canvasLocation" x="998" y="3389"/>
         </scene>
         <!--Freeplay View Controller-->
         <scene sceneID="2jT-Oh-Fuf">
@@ -630,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmT-M7-A9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-240"/>
+            <point key="canvasLocation" x="1932" y="-232"/>
         </scene>
         <!--Score Table View Controller-->
         <scene sceneID="0Sb-Gh-cQV">
@@ -738,7 +727,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uA-xU-yaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="955"/>
+            <point key="canvasLocation" x="1024" y="1947"/>
         </scene>
         <!--Menu2 View Controller-->
         <scene sceneID="STC-fz-P0z">
@@ -830,25 +819,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyo-Ht-6zT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-344" y="2354"/>
+            <point key="canvasLocation" x="-778" y="2834"/>
         </scene>
     </scenes>
     <resources>
         <image name="X.png" width="512" height="512"/>
         <image name="XOutline.png" width="512" height="512"/>
         <image name="check.png" width="128" height="128"/>
-        <image name="help.png" width="150" height="150"/>
+        <image name="help.png" width="300" height="300"/>
         <image name="menu.png" width="300" height="300"/>
         <image name="mic.png" width="256" height="256"/>
         <image name="play.png" width="1024" height="1024"/>
         <image name="record.png" width="320" height="320"/>
         <image name="rotate.png" width="600" height="600"/>
         <image name="start.png" width="300" height="300"/>
-        <image name="trophy.png" width="150" height="150"/>
+        <image name="trophy.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CzP-tn-aYZ"/>
-        <segue reference="A45-y6-HRM"/>
-        <segue reference="zNf-LC-xYg"/>
+        <segue reference="kb5-RW-4Sa"/>
+        <segue reference="c2Y-Pc-hwx"/>
+        <segue reference="Vht-Rg-sEb"/>
     </inferredMetricsTieBreakers>
 </document>
