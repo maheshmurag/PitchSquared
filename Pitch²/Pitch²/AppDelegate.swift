@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func openAndRunTestPatch() -> Void {
-        let fileName = "DavidViolin.pd";
+        let fileName = "violin.pd";
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;
