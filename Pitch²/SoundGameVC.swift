@@ -105,6 +105,7 @@ class SoundGameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PdBase.sendBangToReceiver("select");
         PdBase.sendBangToReceiver("start");
         
         backButton.layer.cornerRadius = 5.0;

@@ -55,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;
-        PdBase.sendBangToReceiver("select");
     }
 
 
