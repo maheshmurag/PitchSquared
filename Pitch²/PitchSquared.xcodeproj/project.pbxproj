@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		970D3C6E197EE29C00D70561 /* violin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 970D3C6D197EE29C00D70561 /* violin.wav */; };
+		970D3C72197F0BA000D70561 /* DavidViolin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 970D3C71197F0BA000D70561 /* DavidViolin.pd */; };
 		9717045E196CA22200EADBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717045D196CA22200EADBFB /* AppDelegate.swift */; };
 		97170463196CA22200EADBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97170461196CA22200EADBFB /* Main.storyboard */; };
 		97170465196CA22200EADBFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97170464196CA22200EADBFB /* Images.xcassets */; };
@@ -83,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		970D3C6D197EE29C00D70561 /* violin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = violin.wav; sourceTree = "<group>"; };
+		970D3C71197F0BA000D70561 /* DavidViolin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DavidViolin.pd; sourceTree = "<group>"; };
 		97170458196CA22200EADBFB /* PitchSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9717045D196CA22200EADBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				97334DB1197EDFAB004EF201 /* violin.pd */,
 				97A88D1D1976079800C3383E /* violin1.pd */,
 				97334DAF197EDF9F004EF201 /* violin2.pd */,
+				970D3C71197F0BA000D70561 /* DavidViolin.pd */,
 				970D3C6D197EE29C00D70561 /* violin.wav */,
 				97BED189196EFB7600766F5E /* AVFoundation.framework */,
 				97BED187196EFB7000766F5E /* AudioToolbox.framework */,
@@ -378,6 +381,7 @@
 				9767F4C41978E87200D1B33F /* help.png in Resources */,
 				97A88D37197871FB00C3383E /* background4.jpg in Resources */,
 				9767F4C01978E56400D1B33F /* trophy.png in Resources */,
+				970D3C72197F0BA000D70561 /* DavidViolin.pd in Resources */,
 				97A88D191975AD0B00C3383E /* X.png in Resources */,
 				97ACAF881979099D00BA4FB2 /* menu.png in Resources */,
 				97170465196CA22200EADBFB /* Images.xcassets in Resources */,
