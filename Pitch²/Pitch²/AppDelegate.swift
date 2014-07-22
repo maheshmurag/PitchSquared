@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Pitch²
+//  Pitch
 //
 //  Created by Cluster 5 on 7/8/14.
 //  Copyright (c) 2014 Alex Yeh. All rights reserved.
@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
         PdBase.setDelegate(self);
-        lrshift_tilde_setup()
-        expr_setup()
-        expr_tilde_setup()
+//        lrshift_tilde_setup()
+//        expr_setup()
+//        expr_tilde_setup()
         openAndRunTestPatch();
         audioController.print();
         
@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;
+        PdBase.sendBangToReceiver("select");
     }
 
 

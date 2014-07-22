@@ -105,6 +105,8 @@ class SoundGameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PdBase.sendBangToReceiver("start");
+        
         backButton.layer.cornerRadius = 5.0;
         backButton.layer.borderWidth = 2.0;
         backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
@@ -157,7 +159,7 @@ class SoundGameVC: UIViewController {
             var index: Int = Int(arc4random() % 48);
             initPitch = self.freqList[index];
             println(initPitch);
-            PdBase.sendFloat(initPitch, toReceiver: "pitch");
+            PdBase.sendFloat(initPitch, toReceiver: "trans");
         
             var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
@@ -320,7 +322,7 @@ class SoundGameVC: UIViewController {
             }
             
             var superfreq : CFloat =  self.freqList[self.freq]
-            PdBase.sendFloat(superfreq, toReceiver: "pitch")
+            PdBase.sendFloat(superfreq, toReceiver: "trans")
             
             if (fabsf(superfreq) == self.initPitch) {
                 UIView.animateWithDuration(0.5, animations: {
@@ -365,6 +367,7 @@ class SoundGameVC: UIViewController {
     
     @IBAction func backAction(sender: UIButton) {
         self.stopUpdates()
+        PdBase.sendBangToReceiver("stop");
     }
 
     override func didReceiveMemoryWarning() {
