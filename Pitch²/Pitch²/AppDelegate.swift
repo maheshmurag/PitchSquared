@@ -18,10 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
         PdBase.setDelegate(self);
+        lrshift_tilde_setup()
+        expr_setup()
+        expr_tilde_setup()
         openAndRunTestPatch();
         audioController.print();
         
-
+        
         return true
     }
 

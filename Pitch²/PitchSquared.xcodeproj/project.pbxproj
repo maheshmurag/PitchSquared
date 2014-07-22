@@ -93,6 +93,14 @@
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		97334D62197D7913004EF201 /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = violin.pd; sourceTree = "<group>"; };
+		97334D7C197ED46F004EF201 /* fts_to_pd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fts_to_pd.h; sourceTree = "<group>"; };
+		97334D7D197ED46F004EF201 /* lrshift~.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "lrshift~.c"; sourceTree = "<group>"; };
+		97334D7E197ED46F004EF201 /* lrshift~.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lrshift~.h"; sourceTree = "<group>"; };
+		97334D7F197ED46F004EF201 /* vexp_fun.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vexp_fun.c; sourceTree = "<group>"; };
+		97334D80197ED46F004EF201 /* vexp_if.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vexp_if.c; sourceTree = "<group>"; };
+		97334D81197ED46F004EF201 /* vexp_if.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vexp_if.h; sourceTree = "<group>"; };
+		97334D82197ED46F004EF201 /* vexp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vexp.c; sourceTree = "<group>"; };
+		97334D83197ED46F004EF201 /* vexp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vexp.h; sourceTree = "<group>"; };
 		9743ED5D19705E07009FC5B9 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeplayViewController.swift; path = ../FreeplayViewController.swift; sourceTree = "<group>"; };
 		9767F4BD1978E0CA00D1B33F /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
@@ -178,6 +186,14 @@
 				9717045D196CA22200EADBFB /* AppDelegate.swift */,
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
+				97334D7C197ED46F004EF201 /* fts_to_pd.h */,
+				97334D7D197ED46F004EF201 /* lrshift~.c */,
+				97334D7E197ED46F004EF201 /* lrshift~.h */,
+				97334D7F197ED46F004EF201 /* vexp_fun.c */,
+				97334D80197ED46F004EF201 /* vexp_if.c */,
+				97334D81197ED46F004EF201 /* vexp_if.h */,
+				97334D82197ED46F004EF201 /* vexp.c */,
+				97334D83197ED46F004EF201 /* vexp.h */,
 				971D218A196D3CA000EA559B /* MenuViewController.swift */,
 				97ACAF84197901A100BA4FB2 /* Menu2ViewController.swift */,
 				97A88D231976EC9200C3383E /* GameModeViewController.swift */,
@@ -531,6 +547,7 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-DPD";
 				PRODUCT_NAME = PitchSquared;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
@@ -551,6 +568,7 @@
 				INFOPLIST_FILE = "Pitch²/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-DPD";
 				PRODUCT_NAME = PitchSquared;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";

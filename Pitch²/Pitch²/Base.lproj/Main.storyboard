@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsG-W9-cqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-1497"/>
+            <point key="canvasLocation" x="1964" y="-649"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="3Iz-ZJ-pR6">
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oH-9C-nph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="-1529"/>
+            <point key="canvasLocation" x="3307" y="-681"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="opr-vn-LH3">
@@ -619,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmT-M7-A9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="-232"/>
+            <point key="canvasLocation" x="1948" y="616"/>
         </scene>
         <!--Score Table View Controller-->
         <scene sceneID="0Sb-Gh-cQV">
@@ -836,8 +836,8 @@
         <image name="trophy.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="A45-y6-HRM"/>
         <segue reference="kb5-RW-4Sa"/>
         <segue reference="c2Y-Pc-hwx"/>
-        <segue reference="Vht-Rg-sEb"/>
     </inferredMetricsTieBreakers>
 </document>
