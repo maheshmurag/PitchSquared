@@ -23,7 +23,6 @@
 		971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 971D2185196D3AA500EA559B /* PitchIcon76.png */; };
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
-		97334DB2197EDFAB004EF201 /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97334DB1197EDFAB004EF201 /* violin.pd */; };
 		97427F61197F88A9006A833B /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97427F5C197F88A0006A833B /* libpd-ios.a */; };
 		9767F4BC1978B08B00D1B33F /* FreeplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */; };
 		9767F4BE1978E0CA00D1B33F /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4BD1978E0CA00D1B33F /* start.png */; };
@@ -48,6 +47,7 @@
 		97ACAF8C197993FF00BA4FB2 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF8A197993FF00BA4FB2 /* record.png */; };
 		97ACAF8E19799F9400BA4FB2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF8D19799F9400BA4FB2 /* play.png */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
+		97C31BE41980475000101563 /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97334DB1197EDFAB004EF201 /* violin.pd */; };
 		97DA5FF8196F43CF00C1B660 /* SoundGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -181,9 +181,6 @@
 		9717045A196CA22200EADBFB /* Pitch² */ = {
 			isa = PBXGroup;
 			children = (
-				43043C74197F1D2100F8FF54 /* vocoder.pd */,
-				97334DB1197EDFAB004EF201 /* violin.pd */,
-				970D3C6D197EE29C00D70561 /* violin.wav */,
 				9717045D196CA22200EADBFB /* AppDelegate.swift */,
 				97170461196CA22200EADBFB /* Main.storyboard */,
 				971D2188196D3B8900EA559B /* PitchData.swift */,
@@ -213,6 +210,9 @@
 		9717045B196CA22200EADBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				43043C74197F1D2100F8FF54 /* vocoder.pd */,
+				97334DB1197EDFAB004EF201 /* violin.pd */,
+				970D3C6D197EE29C00D70561 /* violin.wav */,
 				97ACAF8D19799F9400BA4FB2 /* play.png */,
 				97ACAF89197993FF00BA4FB2 /* recordStop.png */,
 				97ACAF8A197993FF00BA4FB2 /* record.png */,
@@ -368,9 +368,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C31BE41980475000101563 /* violin.pd in Resources */,
 				971D2187196D3AA500EA559B /* PitchIcon76.png in Resources */,
 				9767F4BE1978E0CA00D1B33F /* start.png in Resources */,
-				97334DB2197EDFAB004EF201 /* violin.pd in Resources */,
 				97ACAF8C197993FF00BA4FB2 /* record.png in Resources */,
 				97ACAF8B197993FF00BA4FB2 /* recordStop.png in Resources */,
 				97A88D3119786FB000C3383E /* background1.jpeg in Resources */,
