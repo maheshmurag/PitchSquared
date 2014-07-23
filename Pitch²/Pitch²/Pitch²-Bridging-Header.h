@@ -6,6 +6,7 @@
 #import "PdAudioUnit.h"
 #import "AudioHelpers.h"
 #import "PdBase.h"
+#import "PdDispatcher.h"
 //#import "fts_to_pd.h"
 //#import "lrshift~.h"
 //#import "vexp_if.h"

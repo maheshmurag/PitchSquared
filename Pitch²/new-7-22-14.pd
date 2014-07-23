@@ -1,9 +1,9 @@
-#N canvas 310 174 435 311 10;
+#N canvas 496 361 435 311 10;
 #X obj 102 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -204786 -1
 -1;
-#X obj 144 67 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 144 71 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -204800 -1 -1 100 256;
-#X obj 185 95 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 180 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -236782 -1 -1 0 256;
 #X obj 61 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -259869 -1
 -1;
@@ -90,14 +90,17 @@
 #X obj 327 159 loadbang;
 #X msg 668 203 44100;
 #X obj 668 177 loadbang;
+#X obj 330 12 print bang from Samp \, ler_Pitch;
 #X connect 4 0 21 0;
 #X connect 4 0 43 1;
 #X connect 6 0 39 0;
 #X connect 7 0 9 0;
 #X connect 8 0 10 0;
+#X connect 8 0 66 0;
 #X connect 9 0 29 0;
 #X connect 10 0 59 0;
 #X connect 11 0 38 0;
+#X connect 11 0 66 0;
 #X connect 15 0 45 0;
 #X connect 16 0 55 0;
 #X connect 17 0 37 0;
@@ -145,7 +148,7 @@
 #X restore 20 126 pd Sampler_Pitch/Time_Controls;
 #X floatatom 246 120 4 0 0 0 - - -, f 4;
 #X text 290 120 sample rate in Khz;
-#N canvas 24 105 703 510 fft-tables 0;
+#N canvas 136 105 703 510 fft-tables 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-hann 4096 float 1;
 #A 0 0 4.70877e-06 9.41753e-06 1.41263e-05 1.88351e-05 2.35438e-05
@@ -716,7 +719,7 @@
 #X connect 12 0 17 0;
 #X connect 18 0 7 0;
 #X connect 19 0 18 1;
-#X restore 310 -22 pd fft-tables;
+#X restore 349 -22 pd fft-tables;
 #N canvas 766 259 1000 621 PhaseVocoder(miller) 0;
 #X obj -126 59 cnv 15 990 500 empty empty Phase_Vocoder 570 70 0 50
 -216566 -66577 0;
@@ -968,12 +971,14 @@ feature. Check the phase-accumulation subpatch for more details.;
 #X msg 145 45 100;
 #X obj 22 -14 loadbang;
 #X obj 20 187 dac~;
-#X obj 168 -13 inlet;
 #X obj 180 235 outlet;
-#X obj 265 34 inlet;
-#X obj 238 8 inlet;
-#X obj 324 16 inlet;
 #X obj 22 12 t bang bang;
+#X obj 168 -13 inlet;
+#X obj 219 -12 inlet;
+#X obj 262 -13 inlet;
+#X obj 304 -12 inlet;
+#X obj 185 30 delay 10;
+#X obj 261 61 print bang from new-7-22-14;
 #X connect 0 0 8 2;
 #X connect 1 0 8 3;
 #X connect 2 0 8 4;
@@ -984,10 +989,13 @@ feature. Check the phase-accumulation subpatch for more details.;
 #X connect 12 0 16 1;
 #X connect 13 0 8 0;
 #X connect 14 0 1 0;
-#X connect 15 0 22 0;
-#X connect 17 0 8 1;
-#X connect 19 0 8 3;
-#X connect 20 0 8 2;
-#X connect 21 0 8 4;
-#X connect 22 0 13 0;
-#X connect 22 1 14 0;
+#X connect 15 0 18 0;
+#X connect 18 0 8 0;
+#X connect 18 1 14 0;
+#X connect 19 0 8 1;
+#X connect 20 0 23 0;
+#X connect 20 0 24 0;
+#X connect 21 0 8 3;
+#X connect 22 0 8 4;
+#X connect 22 0 24 0;
+#X connect 23 0 8 2;

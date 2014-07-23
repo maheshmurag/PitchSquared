@@ -22,7 +22,6 @@ class GameModeViewController: UIViewController {
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
-        self.contentSizeForViewInPopover = CGSizeMake(320, 243);
     }
 
     override func viewDidAppear(animated: Bool)  {

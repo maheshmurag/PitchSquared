@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
     let audioController = PdAudioController();
-
+    let dispatcher = PdDispatcher();
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
-        PdBase.setDelegate(self);
+        PdBase.setDelegate(dispatcher);
 //        lrshift_tilde_setup()
 //        expr_setup()
 //        expr_tilde_setup()
@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bp = NSBundle.mainBundle().bundlePath;
         PdBase.openFile(String(fileName), path: bp);
         audioController.active = true;
+        PdBase.sendBangToReceiver("hi");
     }
 
 
