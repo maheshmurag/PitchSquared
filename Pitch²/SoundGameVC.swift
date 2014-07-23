@@ -105,18 +105,15 @@ class SoundGameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        PdBase.sendBangToReceiver("select");
-//        PdBase.sendBangToReceiver("start");
+        backButton.layer.cornerRadius = 5.0
+        backButton.layer.borderWidth = 2.0
+        backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor
         
-        backButton.layer.cornerRadius = 5.0;
-        backButton.layer.borderWidth = 2.0;
-        backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
+        calibrateButton.layer.cornerRadius = 5.0
+        calibrateButton.layer.borderWidth = 2.0
+        calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor
         
-        calibrateButton.layer.cornerRadius = 5.0;
-        calibrateButton.layer.borderWidth = 2.0;
-        calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor;
-        
-        startNewGame();
+        startNewGame()
     }
     
     func startNewGame() -> Void {
@@ -160,7 +157,9 @@ class SoundGameVC: UIViewController {
             var index: Int = Int(arc4random() % 48);
             initPitch = self.freqList[index];
             println(initPitch);
-            PdBase.sendFloat(initPitch, toReceiver: "pitch");
+            
+            PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
+            PdBase.sendBangToReceiver("vocoderStart")
         
             var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
@@ -193,6 +192,7 @@ class SoundGameVC: UIViewController {
     
     func countDownTimer() -> Void {
         if(seconds <= 0){
+            PdBase.sendBangToReceiver("vocoderStop")
             numWrong++;
             if (numWrong == 1){
                 UIView.animateWithDuration(0.5, animations: {
@@ -323,9 +323,10 @@ class SoundGameVC: UIViewController {
             }
             
             var superfreq : CFloat =  self.freqList[self.freq]
-            PdBase.sendFloat(superfreq, toReceiver: "pitch")
+            PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
             
             if (fabsf(superfreq) == self.initPitch) {
+                PdBase.sendBangToReceiver("vocoderStop")
                 UIView.animateWithDuration(0.5, animations: {
                     self.check.alpha = 1.0
                 }, completion: {
@@ -368,7 +369,7 @@ class SoundGameVC: UIViewController {
     
     @IBAction func backAction(sender: UIButton) {
         self.stopUpdates()
-        //PdBase.sendBangToReceiver("stop");
+        PdBase.sendBangToReceiver("vocoderStop");
     }
 
     override func didReceiveMemoryWarning() {

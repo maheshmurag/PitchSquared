@@ -13,14 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
     let audioController = PdAudioController();
+    let dispatcher = PdDispatcher();
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         audioController.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true)
-        PdBase.setDelegate(self);
-//        lrshift_tilde_setup()
-//        expr_setup()
-//        expr_tilde_setup()
+        PdBase.setDelegate(dispatcher);
+        lrshift_tilde_setup()
+        expr_setup()
+        expr_tilde_setup()
         openAndRunTestPatch();
         audioController.print();
         
@@ -51,10 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func openAndRunTestPatch() -> Void {
-        let fileName = "DavidViolin.pd";
-        let bp = NSBundle.mainBundle().bundlePath;
-        PdBase.openFile(String(fileName), path: bp);
-        audioController.active = true;
+        let fileName = "violin.pd"
+        let bp = NSBundle.mainBundle().bundlePath
+        PdBase.openFile(String(fileName), path: bp)
+        audioController.active = true
+        println("Patch did load !!!!!!")
     }
 
 
