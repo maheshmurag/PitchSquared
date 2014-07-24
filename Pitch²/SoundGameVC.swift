@@ -106,6 +106,8 @@ class SoundGameVC: UIViewController {
         super.viewDidLoad()
         //PdBase.sendBangToReceiver("vocoderStart")
         
+        
+        
         backButton.layer.cornerRadius = 5.0
         backButton.layer.borderWidth = 2.0
         backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor
@@ -159,9 +161,15 @@ class SoundGameVC: UIViewController {
             initPitch = self.freqList[index];
             println(initPitch);
             
+<<<<<<< HEAD
             //PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
             PdBase.sendFloat(initPitch, toReceiver: "pitch");
             
+=======
+            PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
+            PdBase.sendBangToReceiver("vocoderStart");
+        
+>>>>>>> New-Vocoder
             var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
             var timer3 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startGameMessage"), userInfo: nil, repeats: false)
@@ -193,6 +201,10 @@ class SoundGameVC: UIViewController {
     
     func countDownTimer() -> Void {
         if(seconds <= 0){
+<<<<<<< HEAD
+=======
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+>>>>>>> New-Vocoder
             numWrong++;
             if (numWrong == 1){
                 UIView.animateWithDuration(0.5, animations: {
@@ -223,7 +235,6 @@ class SoundGameVC: UIViewController {
                     pitchData.score = self.score;
                 }, completion: { (value: Bool)in} );
                 timer5.invalidate();
-                self.stopUpdates();
                 self.stopUpdates();
                 let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
                 let vc : GameOverViewController = storyboard.instantiateViewControllerWithIdentifier("GameOver") as GameOverViewController;
@@ -328,6 +339,10 @@ class SoundGameVC: UIViewController {
             PdBase.sendFloat(superfreq, toReceiver: "pitch")
                 
             if (fabsf(superfreq) == self.initPitch) {
+<<<<<<< HEAD
+=======
+                var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+>>>>>>> New-Vocoder
                 UIView.animateWithDuration(0.5, animations: {
                     self.check.alpha = 1.0
                 }, completion: {
@@ -351,9 +366,9 @@ class SoundGameVC: UIViewController {
                 self.startNewGame();
             } else {
                 if (self.sMode.on) {
-                    UIView.animateWithDuration(0.1, animations: {
-                        self.view.backgroundColor = UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0);
-                    });
+//                    UIView.animateWithDuration(0.1, animations: {
+//                        self.view.backgroundColor = UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0);
+//                    });
                     
                 } else {
                     UIView.animateWithDuration(0.1, animations: {
@@ -368,9 +383,19 @@ class SoundGameVC: UIViewController {
         }
     }
     
+<<<<<<< HEAD
     @IBAction func backAction(sender: UIButton) {
         self.stopUpdates()
         //PdBase.sendBangToReceiver("vocoderStop");
+=======
+    func stopBang() -> Void{
+        PdBase.sendBangToReceiver("vocoderStop");
+>>>>>>> New-Vocoder
+    }
+    
+    @IBAction func backAction(sender: UIButton) {
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+        PdBase.sendBangToReceiver("vocoderStop")
     }
 
     override func didReceiveMemoryWarning() {

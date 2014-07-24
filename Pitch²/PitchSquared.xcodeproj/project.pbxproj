@@ -24,7 +24,6 @@
 		971D2189196D3B8900EA559B /* PitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D2188196D3B8900EA559B /* PitchData.swift */; };
 		971D218B196D3CA000EA559B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D218A196D3CA000EA559B /* MenuViewController.swift */; };
 		97334DB2197EDFAB004EF201 /* violin.pd in Resources */ = {isa = PBXBuildFile; fileRef = 97334DB1197EDFAB004EF201 /* violin.pd */; };
-		97427F61197F88A9006A833B /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97427F5C197F88A0006A833B /* libpd-ios.a */; };
 		9767F4BC1978B08B00D1B33F /* FreeplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */; };
 		9767F4BE1978E0CA00D1B33F /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4BD1978E0CA00D1B33F /* start.png */; };
 		9767F4C01978E56400D1B33F /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767F4BF1978E56400D1B33F /* trophy.png */; };
@@ -50,6 +49,7 @@
 		97ACAF8E19799F9400BA4FB2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ACAF8D19799F9400BA4FB2 /* play.png */; };
 		97BED101196E4B2A00766F5E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED100196E4B2A00766F5E /* ScoreTableViewController.swift */; };
 		97DA5FF8196F43CF00C1B660 /* SoundGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */; };
+		97F112E31981AF0800CE1DCB /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F112DE1981AEE900CE1DCB /* libpd-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,23 +60,23 @@
 			remoteGlobalIDString = 97170457196CA22200EADBFB;
 			remoteInfo = "Pitch²";
 		};
-		97427F5B197F88A0006A833B /* PBXContainerItemProxy */ = {
+		97F112DD1981AEE900CE1DCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 97427F56197F88A0006A833B /* libpd.xcodeproj */;
+			containerPortal = 97F112D81981AEE900CE1DCB /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "libpd-ios";
 		};
-		97427F5D197F88A0006A833B /* PBXContainerItemProxy */ = {
+		97F112DF1981AEE900CE1DCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 97427F56197F88A0006A833B /* libpd.xcodeproj */;
+			containerPortal = 97F112D81981AEE900CE1DCB /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 119013AB1486450C00086F19;
 			remoteInfo = "libpd-osx";
 		};
-		97427F5F197F88A4006A833B /* PBXContainerItemProxy */ = {
+		97F112E11981AEF700CE1DCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 97427F56197F88A0006A833B /* libpd.xcodeproj */;
+			containerPortal = 97F112D81981AEE900CE1DCB /* libpd.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "libpd-ios";
@@ -107,7 +107,6 @@
 		971D2188196D3B8900EA559B /* PitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchData.swift; sourceTree = "<group>"; };
 		971D218A196D3CA000EA559B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		97334DB1197EDFAB004EF201 /* violin.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = violin.pd; path = ../violin.pd; sourceTree = "<group>"; };
-		97427F56197F88A0006A833B /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		9767F4BB1978B08B00D1B33F /* FreeplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeplayViewController.swift; path = ../FreeplayViewController.swift; sourceTree = "<group>"; };
 		9767F4BD1978E0CA00D1B33F /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		9767F4BF1978E56400D1B33F /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		97BED189196EFB7600766F5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		97DA5FF7196F43CF00C1B660 /* SoundGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundGameVC.swift; path = ../SoundGameVC.swift; sourceTree = "<group>"; };
 		97DA5FF9196F819F00C1B660 /* Pitch²-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pitch²-Bridging-Header.h"; sourceTree = "<group>"; };
+		97F112D81981AEE900CE1DCB /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../../Documents/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97427F61197F88A9006A833B /* libpd-ios.a in Frameworks */,
+				97F112E31981AF0800CE1DCB /* libpd-ios.a in Frameworks */,
 				43248E92197F190D0037824F /* AudioToolbox.framework in Frameworks */,
 				43248E91197F19090037824F /* AVFoundation.framework in Frameworks */,
 			);
@@ -167,7 +167,7 @@
 				9717045A196CA22200EADBFB /* Pitch² */,
 				9717046D196CA22200EADBFB /* Pitch²Tests */,
 				97170459196CA22200EADBFB /* Products */,
-				97427F56197F88A0006A833B /* libpd.xcodeproj */,
+				97F112D81981AEE900CE1DCB /* libpd.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,11 +257,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		97427F57197F88A0006A833B /* Products */ = {
+		97F112D91981AEE900CE1DCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97427F5C197F88A0006A833B /* libpd-ios.a */,
-				97427F5E197F88A0006A833B /* libpd-osx.a */,
+				97F112DE1981AEE900CE1DCB /* libpd-ios.a */,
+				97F112E01981AEE900CE1DCB /* libpd-osx.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				97427F60197F88A4006A833B /* PBXTargetDependency */,
+				97F112E21981AEF700CE1DCB /* PBXTargetDependency */,
 			);
 			name = PitchSquared;
 			productName = "Pitch²";
@@ -337,8 +337,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 97427F57197F88A0006A833B /* Products */;
-					ProjectRef = 97427F56197F88A0006A833B /* libpd.xcodeproj */;
+					ProductGroup = 97F112D91981AEE900CE1DCB /* Products */;
+					ProjectRef = 97F112D81981AEE900CE1DCB /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -350,18 +350,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		97427F5C197F88A0006A833B /* libpd-ios.a */ = {
+		97F112DE1981AEE900CE1DCB /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = 97427F5B197F88A0006A833B /* PBXContainerItemProxy */;
+			remoteRef = 97F112DD1981AEE900CE1DCB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		97427F5E197F88A0006A833B /* libpd-osx.a */ = {
+		97F112E01981AEE900CE1DCB /* libpd-osx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-osx.a";
-			remoteRef = 97427F5D197F88A0006A833B /* PBXContainerItemProxy */;
+			remoteRef = 97F112DF1981AEE900CE1DCB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -446,10 +446,10 @@
 			target = 97170457196CA22200EADBFB /* PitchSquared */;
 			targetProxy = 9717046B196CA22200EADBFB /* PBXContainerItemProxy */;
 		};
-		97427F60197F88A4006A833B /* PBXTargetDependency */ = {
+		97F112E21981AEF700CE1DCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "libpd-ios";
-			targetProxy = 97427F5F197F88A4006A833B /* PBXContainerItemProxy */;
+			targetProxy = 97F112E11981AEF700CE1DCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,7 +560,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
 			};
 			name = Debug;
@@ -580,7 +580,7 @@
 				PRODUCT_NAME = PitchSquared;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pitch²/Pitch²-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "/Users/cluster5/Documents/pd-for-ios/libpd/**";
 			};
 			name = Release;
