@@ -127,10 +127,10 @@ class FreeplayViewController: UIViewController {
             var superfreq : CFloat =  self.freqList[self.freq]
             self.playButton.setTitle(self.freqListNote[superfreq], forState: UIControlState.Normal);
             self.playButton.setTitle(self.freqListNote[superfreq], forState: UIControlState.Highlighted);
-            UIView.animateWithDuration(0.1, animations:
-                {self.playButton.setTitleColor(UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0), forState: nil)
-                    
-                });
+//            UIView.animateWithDuration(0.1, animations:
+//                {self.playButton.setTitleColor(UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0), forState: nil)
+//                    
+//                });
             if(self.playButton.touchInside)
             {//println("button pressed")
                 PdBase.sendBangToReceiver("vocoderStart")

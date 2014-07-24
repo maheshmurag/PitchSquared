@@ -1,11 +1,11 @@
-#N canvas 715 303 435 311 10;
+#N canvas 607 300 435 311 10;
 #X obj 102 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -204786 -1
 -1;
 #X obj 55 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -259869 -1
 -1;
 #X text 82 3 stop;
 #X text 124 4 play;
-#N canvas 276 22 905 672 Sampler_Pitch/Time_Controls 1;
+#N canvas 276 22 905 672 Sampler_Pitch/Time_Controls 0;
 #X obj 462 558 cnv 15 120 160 empty empty empty 20 12 0 14 -232608
 -66577 0;
 #X obj 55 422 cnv 15 475 135 empty empty Counter 11 12 0 14 -188027
@@ -961,7 +961,7 @@ feature. Check the phase-accumulation subpatch for more details.;
 -1;
 #X msg 126 84 100;
 #X obj 20 -14 loadbang;
-#X obj 20 187 dac~;
+#X obj 20 247 dac~;
 #X obj 78 -14 inlet;
 #X obj 163 -14 inlet;
 #X obj 117 -14 inlet;
@@ -970,11 +970,16 @@ feature. Check the phase-accumulation subpatch for more details.;
 #X text 165 6 time;
 #X text 206 5 trans, f 6;
 #X text 188 104 sample rate;
+#X obj 20 214 *~;
+#X obj 108 210 vline~;
+#X msg 197 188 0.7 500 \, 0 \$1 1000;
+#X obj 241 142 nbx 5 14 -1e+37 1e+37 0 0 empty dur empty 0 -8 0 10
+-262144 -1 -1 1500 256;
+#X obj 187 154 loadbang 1;
 #X connect 0 0 4 2;
 #X connect 1 0 4 1;
 #X connect 4 0 6 0;
-#X connect 6 0 10 0;
-#X connect 6 0 10 1;
+#X connect 6 0 19 0;
 #X connect 7 0 4 0;
 #X connect 8 0 4 3;
 #X connect 9 0 15 0;
@@ -984,3 +989,9 @@ feature. Check the phase-accumulation subpatch for more details.;
 #X connect 14 0 4 4;
 #X connect 15 0 7 0;
 #X connect 15 1 8 0;
+#X connect 19 0 10 0;
+#X connect 19 0 10 1;
+#X connect 20 0 19 1;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
