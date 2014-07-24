@@ -61,6 +61,7 @@ class FreeplayViewController: UIViewController {
     
     @IBAction func backAction(sender: UIButton) {
         stopUpdates()
+        PdBase.sendBangToReceiver("vocoderStop")
     }
     
     func stopUpdates() -> Void{

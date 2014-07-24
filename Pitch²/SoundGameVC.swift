@@ -373,7 +373,8 @@ class SoundGameVC: UIViewController {
     }
     
     @IBAction func backAction(sender: UIButton) {
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+        PdBase.sendBangToReceiver("vocoderStop")
     }
 
     override func didReceiveMemoryWarning() {
