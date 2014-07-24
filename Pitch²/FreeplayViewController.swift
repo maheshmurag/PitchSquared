@@ -133,8 +133,7 @@ class FreeplayViewController: UIViewController {
                 });
             if(self.playButton.touchInside)
             {//println("button pressed")
-                PdBase.sendBangToReceiver("vocoderStart")
-                PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
+                PdBase.sendFloat(superfreq, toReceiver: "pitch")
                 if(self.recordOn){
                     //self.timeMeasure.updateValue(NSString(format: "%.2f", superfreq).floatValue, forKey: self.diffMill());
                 }
@@ -145,7 +144,7 @@ class FreeplayViewController: UIViewController {
             }
             else{
                 //println("button let go")
-                PdBase.sendBangToReceiver("vocoderStop")
+                PdBase.sendFloat(0.0,toReceiver: "pitch")
             }
         })
     }
