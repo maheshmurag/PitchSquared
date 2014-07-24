@@ -83,16 +83,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		43043C74197F1D2100F8FF54 /* vocoder.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocoder.pd; sourceTree = "<group>"; };
-		43FF72C2197F77F500FD71F9 /* fts_to_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts_to_pd.h; sourceTree = "<group>"; };
-		43FF72C3197F77F500FD71F9 /* lrshift~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "lrshift~.c"; sourceTree = "<group>"; };
-		43FF72C4197F77F500FD71F9 /* lrshift~.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lrshift~.h"; sourceTree = "<group>"; };
-		43FF72C5197F77F500FD71F9 /* vexp_fun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp_fun.c; sourceTree = "<group>"; };
-		43FF72C6197F77F500FD71F9 /* vexp_if.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp_if.c; sourceTree = "<group>"; };
-		43FF72C7197F77F500FD71F9 /* vexp_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vexp_if.h; sourceTree = "<group>"; };
-		43FF72C8197F77F500FD71F9 /* vexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vexp.c; sourceTree = "<group>"; };
-		43FF72C9197F77F500FD71F9 /* vexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vexp.h; sourceTree = "<group>"; };
-		970D3C6D197EE29C00D70561 /* violin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = violin.wav; path = ../violin.wav; sourceTree = "<group>"; };
 		97170458196CA22200EADBFB /* PitchSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717045C196CA22200EADBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9717045D196CA22200EADBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

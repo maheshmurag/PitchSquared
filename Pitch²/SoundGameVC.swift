@@ -105,9 +105,14 @@ class SoundGameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         backButton.layer.cornerRadius = 5.0
         backButton.layer.borderWidth = 2.0
         backButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor
+=======
+        PdBase.sendBangToReceiver("select");
+        PdBase.sendBangToReceiver("start");
+>>>>>>> parent of ffe8581... Revert To Working Copy
         
         calibrateButton.layer.cornerRadius = 5.0
         calibrateButton.layer.borderWidth = 2.0
@@ -157,9 +162,13 @@ class SoundGameVC: UIViewController {
             var index: Int = Int(arc4random() % 48);
             initPitch = self.freqList[index];
             println(initPitch);
+<<<<<<< HEAD
             
             PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
             PdBase.sendBangToReceiver("vocoderStart")
+=======
+            PdBase.sendFloat(initPitch, toReceiver: "trans");
+>>>>>>> parent of ffe8581... Revert To Working Copy
         
             var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
@@ -323,7 +332,11 @@ class SoundGameVC: UIViewController {
             }
             
             var superfreq : CFloat =  self.freqList[self.freq]
+<<<<<<< HEAD
             PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
+=======
+            PdBase.sendFloat(superfreq, toReceiver: "trans")
+>>>>>>> parent of ffe8581... Revert To Working Copy
             
             if (fabsf(superfreq) == self.initPitch) {
                 PdBase.sendBangToReceiver("vocoderStop")
@@ -369,7 +382,11 @@ class SoundGameVC: UIViewController {
     
     @IBAction func backAction(sender: UIButton) {
         self.stopUpdates()
+<<<<<<< HEAD
         PdBase.sendBangToReceiver("vocoderStop");
+=======
+        PdBase.sendBangToReceiver("stop");
+>>>>>>> parent of ffe8581... Revert To Working Copy
     }
 
     override func didReceiveMemoryWarning() {

@@ -53,11 +53,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func openAndRunTestPatch() -> Void {
+<<<<<<< HEAD
         let fileName = "violin.pd"
         let bp = NSBundle.mainBundle().bundlePath
         PdBase.openFile(String(fileName), path: bp)
         audioController.active = true
         println("Patch did load !!!!!!")
+=======
+        let fileName = "violin.pd";
+        let bp = NSBundle.mainBundle().bundlePath;
+        PdBase.openFile(String(fileName), path: bp);
+        audioController.active = true;
+>>>>>>> parent of ffe8581... Revert To Working Copy
     }
 
 
