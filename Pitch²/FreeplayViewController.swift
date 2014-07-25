@@ -96,34 +96,40 @@ class FreeplayViewController: UIViewController {
             self.yVal = accelerometerData.acceleration.y;
             self.zVal = accelerometerData.acceleration.z;
             
+            
             var strX = NSString(format: "%.2f", self.xVal-self.xDiff);
             var strY = NSString(format: "%.2f", self.yVal-self.yDiff);
             var strZ = NSString(format: "%.2f", self.zVal-self.zDiff);
+            
+            var cents : CFloat = 0;
+            cents = strX.floatValue * 600.0;
             
             self.freq = Int(floor(1.0+strX.doubleValue * 6.0))+6
             //println(strX.doubleValue)
             self.scale = Int(floor((strY.doubleValue + 1.0)*2))
             // println("freqB: \(self.freq)");
-            if (self.scale) >= 3
+            if (self.scale) >= 2
             {  //println("octave: \(self.freqList[self.freq])")
                 self.freq += 36;
                 if(self.freq>=48){
                     self.freq = 47
                 }
-            }
-            else if (self.scale) >= 2 {
-                self.freq += 24
-                
+                cents += 00;
             }
             else if (self.scale) >= 1 {
-                self.freq += 12
+                self.freq += 24
+                cents -= 1200;
             }
             else{
                 if(self.freq<=0)
                 {
                     self.freq=0;
                 }
+                cents-=2400;
+                
             }
+            cents+=500;
+            cents -= cents % 100
             
             var superfreq : CFloat =  self.freqList[self.freq]
             self.playButton.setTitle(self.freqListNote[superfreq], forState: UIControlState.Normal);
@@ -135,7 +141,7 @@ class FreeplayViewController: UIViewController {
             if(self.playButton.touchInside)
             {//println("button pressed")
                 PdBase.sendBangToReceiver("vocoderStart")
-                PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
+                PdBase.sendFloat(cents, toReceiver: "vocoderTransposition")
                 if(self.recordOn){
                     //self.timeMeasure.updateValue(NSString(format: "%.2f", superfreq).floatValue, forKey: self.diffMill());
                 }

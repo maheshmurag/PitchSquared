@@ -14,10 +14,11 @@ class SoundGameVC: UIViewController {
     let motionManager = CMMotionManager()
     var valuesXYZ : Array<Float> = [0.0,0.0,0.0]
     @IBOutlet var backButton: UIButton
-    @IBOutlet var alabelX : UILabel
-    @IBOutlet var alabelY : UILabel
-    @IBOutlet var alabelZ : UILabel
-
+ 
+    @IBOutlet var easy: UIButton
+    @IBOutlet var medium: UIButton
+    @IBOutlet var hard: UIButton
+  
     @IBOutlet var scoreLabel: UILabel
     @IBOutlet var calibrateButton: UIButton
     
@@ -55,6 +56,7 @@ class SoundGameVC: UIViewController {
     var timer5: NSTimer;
     var prevScale : Int;
     var round: Int;
+    var dateStart: NSDate = NSDate();
     
     var freqList : Float[] = [110.0,116.54,123.47,130.81,138.59,146.83,155.56,164.81,174.61,185.00,196.00,207.65,220.0,233.08,246.94,261.63,277.18,293.66,311.13,329.63,349.23,369.99,392.63,415.30,440.00,466.16,493.88,523.25,554.37,587.33,622.25,659.25,698.46,739.99,783.99,830.61,880.0,932.33,987.77,1046.50,1108.73,1174.66,1244.51,1318.51,1396.91,1479.98,1661.22,1760.00];
     
@@ -76,6 +78,7 @@ class SoundGameVC: UIViewController {
         scale = 2;
         prevScale = 0;
         round = 0;
+        
         super.init(coder: aDecoder)
     }
     
@@ -116,12 +119,88 @@ class SoundGameVC: UIViewController {
         calibrateButton.layer.borderWidth = 2.0
         calibrateButton.layer.borderColor = UIColor(red: 79/255, green: 225/255, blue: 180/255, alpha: 1.0).CGColor
         
-        startNewGame()
+        //startNewGame()
     }
+    
+    
+    @IBAction func easyAction(sender: UIButton) {
+        self.seconds = 10;
+        self.prevSecond=self.seconds;
+        self.countDown.text=String(seconds);
+        UIView.animateWithDuration(0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.scoreLabel.alpha=1;
+            self.easy.enabled=false;
+            self.easy.alpha=0;
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.2, animations: {
+                    self.medium.alpha=0
+                    self.medium.enabled=false;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.2, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.hard.enabled=false;
+                    self.hard.alpha = 0;
+                    self.startNewGame()
+                    }, completion: {(value: Bool) in})
+                
+            });
+        
+    }
+    @IBAction func mediumAction(sender: UIButton) {
+        self.seconds = 6;
+        self.prevSecond=self.seconds;
+        self.countDown.text=String(seconds);
+        UIView.animateWithDuration(0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.scoreLabel.alpha=1;
+            self.easy.enabled=false;
+            self.easy.alpha=0;
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.2, animations: {
+                    self.medium.alpha=0
+                    self.medium.enabled=false;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.2, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.hard.enabled=false;
+                    self.hard.alpha = 0;
+                    self.startNewGame()
+                    }, completion: {(value: Bool) in})
+                
+            });
+        
+    }
+    @IBAction func hardAction(sender: UIButton) {
+        self.seconds = 3;
+        self.countDown.text=String(seconds);
+        self.prevSecond=self.seconds;
+        UIView.animateWithDuration(0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.scoreLabel.alpha=1;
+            self.easy.enabled=false;
+            self.easy.alpha=0;
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.2, animations: {
+                    self.medium.alpha=0
+                    self.medium.enabled=false;
+                    }, completion: {(value: Bool) in})
+                UIView.animateWithDuration(0.2, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.hard.enabled=false;
+                    self.hard.alpha = 0;
+                    self.startNewGame()
+                    }, completion: {(value: Bool) in})
+                
+            });
+        
+    }
+    
+
+    
     
     func startNewGame() -> Void {
         round++;
         if (!gameExit) {
+            dateStart = NSDate();
+            
             self.timer5.invalidate();
             
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("animateCountDown"), userInfo: nil, repeats: false);
@@ -157,8 +236,14 @@ class SoundGameVC: UIViewController {
                 self.message.alpha = 1.0;
                 });
         
-            var index: Int = Int(arc4random() % 48);
-            initPitch = self.freqList[index];
+//            var index: Int = Int(arc4random() % 48);
+            
+            var randCent = Float(arc4random_uniform(3601));
+            randCent = randCent - 3000;
+            randCent = randCent + 500;
+            randCent -= randCent % 100;
+            
+            initPitch = randCent;
             println(initPitch);
             
             PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
@@ -194,6 +279,7 @@ class SoundGameVC: UIViewController {
     }
     
     func countDownTimer() -> Void {
+        
         if(seconds <= 0){
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
             numWrong++;
@@ -281,6 +367,7 @@ class SoundGameVC: UIViewController {
     
     func startAccelerationCollection() -> Void{
         if (!gameExit) {
+            dateStart =  NSDate()
             motionManager.accelerometerUpdateInterval = 0.05
             motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData :     CMAccelerometerData!, error : NSError!) in
             
@@ -291,45 +378,47 @@ class SoundGameVC: UIViewController {
             var strX = NSString(format: "%.1f", self.xVal-self.xDiff);
             var strY = NSString(format: "%.1f", self.yVal-self.yDiff);
             var strZ = NSString(format: "%.2f", self.zVal-self.zDiff);
-            
-            self.alabelX.text =  strX
-            self.alabelY.text =  strY
-            self.alabelZ.text =  strZ
+                
+            var cents : CFloat = 0;
+            cents = strX.floatValue * 600.0;
+           
             
             var pitch = (strX).floatValue * 100 + 100;
             pitch *= (strY.floatValue * 10);
-            
+                
             self.freq = Int(floor(1.0+strX.doubleValue * 6.0))+6
             //println(strX.doubleValue)
-            self.scale = Int(floor((strY.doubleValue + 1.0)*2))
+            self.scale = Int(floor((strY.doubleValue + 1.0)*1.5))
             // println("freqB: \(self.freq)");
-            if (self.scale) >= 3
+            if (self.scale) >= 2
             {  //println("octave: \(self.freqList[self.freq])")
                 self.freq += 36;
                 if(self.freq>=48){
                     self.freq = 47
                 }
-            }
-            else if (self.scale) >= 2 {
-                self.freq += 24
-                
+                cents += 00;
             }
             else if (self.scale) >= 1 {
-                self.freq += 12
+                self.freq += 24
+                cents -= 1200;
             }
             else{
                 if(self.freq<=0)
                 {
                     self.freq=0;
                 }
+                cents-=2400;
+                
             }
-            
+                cents+=500;
+                cents -= cents % 100
+                //println("motherfucking cents bitch: \(cents)");
             var superfreq : CFloat =  self.freqList[self.freq]
                 
-            PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
+            PdBase.sendFloat(cents, toReceiver: "vocoderTransposition")
             //PdBase.sendFloat(superfreq, toReceiver: "pitch")
                 
-            if (fabsf(superfreq) == self.initPitch) {
+            if (cents == self.initPitch) {
                 var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
                 UIView.animateWithDuration(0.5, animations: {
                     self.check.alpha = 1.0
@@ -339,12 +428,13 @@ class SoundGameVC: UIViewController {
                         self.check.alpha = 0.0
                     }, completion: {
                         (value: Bool) in
-                        //
                     });
                 });
                 
                 self.timer5.invalidate();
-                self.score += 100;
+                var time = self.diffMill()
+                self.score = self.score + Int(100 - (time/100.0));
+                println("time: \(time)")
                 self.scoreLabel.text = String(self.score);
                 if(self.prevSecond > 6){
                     self.prevSecond -= 2;
@@ -354,9 +444,9 @@ class SoundGameVC: UIViewController {
                 self.startNewGame();
             } else {
                 if (self.sMode.on) {
-//                    UIView.animateWithDuration(0.1, animations: {
-//                        self.view.backgroundColor = UIColor(red: strX.floatValue + 1, green: strY.floatValue + 1, blue: strZ.floatValue + 1, alpha: 1.0);
-//                    });
+                    UIView.animateWithDuration(0.1, animations: {
+                        self.view.backgroundColor = UIColor(red: Double(strX.floatValue + 1), green: Double(strY.floatValue + 1), blue: Double(strZ.floatValue + 1), alpha: 1.0);
+                    });
                     
                 } else {
                     UIView.animateWithDuration(0.1, animations: {
@@ -369,6 +459,12 @@ class SoundGameVC: UIViewController {
            
             })
         }
+    }
+    
+    func diffMill() -> Float{
+        var dateCur: NSDate = NSDate()
+        println("actual: \(dateCur.timeIntervalSinceDate(dateStart))")
+        return  NSString(format: "%.2f", dateCur.timeIntervalSinceDate(dateStart)).floatValue * 1000.0;
     }
     
     func stopBang() -> Void{

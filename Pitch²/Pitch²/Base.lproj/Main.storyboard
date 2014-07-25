@@ -197,24 +197,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="c0a-io-h4v"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aY = " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRc-B3-419">
-                                <rect key="frame" x="134" y="211" width="485" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aZ = " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvJ-Be-Z24">
-                                <rect key="frame" x="134" y="282" width="634" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aX =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYM-Tx-Lhp">
-                                <rect key="frame" x="134" y="157" width="643" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcl-p7-JVr">
                                 <rect key="frame" x="412" y="922" width="336" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="29"/>
@@ -274,6 +256,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nl-6r-5Qw">
+                                <rect key="frame" x="318" y="219" width="132" height="72"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="56"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="easyAction:" destination="v82-4m-a3d" eventType="touchUpInside" id="2Hx-As-f9U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1m-B8-UaZ">
+                                <rect key="frame" x="286" y="436" width="197" height="57"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="56"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mediumAction:" destination="v82-4m-a3d" eventType="touchUpInside" id="gru-qE-zTA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c51-6y-uk1">
+                                <rect key="frame" x="262" y="639" width="245" height="138"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="56"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.27197633780000002" green="0.89425526489999996" blue="0.63288646189999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hardAction:" destination="v82-4m-a3d" eventType="touchUpInside" id="0we-Mv-sda"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -283,13 +298,13 @@
                         <outlet property="X1" destination="0gg-eW-mwG" id="uUv-Po-FAJ"/>
                         <outlet property="X2" destination="Foy-03-rU9" id="l6Y-Lx-u7k"/>
                         <outlet property="X3" destination="w9u-YB-jrL" id="mx0-xf-wAr"/>
-                        <outlet property="alabelX" destination="lYM-Tx-Lhp" id="m08-zk-0mf"/>
-                        <outlet property="alabelY" destination="PRc-B3-419" id="DHq-hB-g4E"/>
-                        <outlet property="alabelZ" destination="HvJ-Be-Z24" id="OKP-PG-wmL"/>
                         <outlet property="backButton" destination="9Fv-Pi-IN5" id="339-0Z-JZo"/>
                         <outlet property="calibrateButton" destination="pcl-p7-JVr" id="Ozg-vs-gGW"/>
                         <outlet property="check" destination="MkN-ZF-6QE" id="tWC-9F-FcE"/>
                         <outlet property="countDown" destination="Kyg-rO-ZJp" id="rrf-cb-1mk"/>
+                        <outlet property="easy" destination="0nl-6r-5Qw" id="tVM-2A-K3W"/>
+                        <outlet property="hard" destination="c51-6y-uk1" id="w9m-fp-T11"/>
+                        <outlet property="medium" destination="e1m-B8-UaZ" id="d6J-oN-iVx"/>
                         <outlet property="message" destination="rND-Qg-uZb" id="rQF-SS-zv5"/>
                         <outlet property="sMode" destination="JxR-QU-cjy" id="24o-Xo-BEF"/>
                         <outlet property="scoreLabel" destination="22k-aO-cWg" id="k3g-oB-ki0"/>
@@ -836,8 +851,8 @@
         <image name="trophy.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Kz-vY-bRt"/>
         <segue reference="c2Y-Pc-hwx"/>
         <segue reference="kb5-RW-4Sa"/>
+        <segue reference="c0a-io-h4v"/>
     </inferredMetricsTieBreakers>
 </document>
