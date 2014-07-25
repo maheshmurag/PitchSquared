@@ -161,15 +161,9 @@ class SoundGameVC: UIViewController {
             initPitch = self.freqList[index];
             println(initPitch);
             
-<<<<<<< HEAD
-            //PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
-            PdBase.sendFloat(initPitch, toReceiver: "pitch");
-            
-=======
             PdBase.sendFloat(initPitch, toReceiver: "vocoderTransposition");
             PdBase.sendBangToReceiver("vocoderStart");
         
->>>>>>> New-Vocoder
             var timer1 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:    Selector("startAccelerationCollection"), userInfo: nil, repeats: false)
         
             var timer3 = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("startGameMessage"), userInfo: nil, repeats: false)
@@ -201,10 +195,7 @@ class SoundGameVC: UIViewController {
     
     func countDownTimer() -> Void {
         if(seconds <= 0){
-<<<<<<< HEAD
-=======
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
->>>>>>> New-Vocoder
             numWrong++;
             if (numWrong == 1){
                 UIView.animateWithDuration(0.5, animations: {
@@ -335,14 +326,11 @@ class SoundGameVC: UIViewController {
             
             var superfreq : CFloat =  self.freqList[self.freq]
                 
-            //PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
-            PdBase.sendFloat(superfreq, toReceiver: "pitch")
+            PdBase.sendFloat(superfreq, toReceiver: "vocoderTransposition")
+            //PdBase.sendFloat(superfreq, toReceiver: "pitch")
                 
             if (fabsf(superfreq) == self.initPitch) {
-<<<<<<< HEAD
-=======
                 var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
->>>>>>> New-Vocoder
                 UIView.animateWithDuration(0.5, animations: {
                     self.check.alpha = 1.0
                 }, completion: {
@@ -383,18 +371,13 @@ class SoundGameVC: UIViewController {
         }
     }
     
-<<<<<<< HEAD
-    @IBAction func backAction(sender: UIButton) {
-        self.stopUpdates()
-        //PdBase.sendBangToReceiver("vocoderStop");
-=======
     func stopBang() -> Void{
         PdBase.sendBangToReceiver("vocoderStop");
->>>>>>> New-Vocoder
     }
     
     @IBAction func backAction(sender: UIButton) {
         //var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector:    Selector("stopBang"), userInfo: nil, repeats: false)
+        stopUpdates();
         PdBase.sendBangToReceiver("vocoderStop")
     }
 
